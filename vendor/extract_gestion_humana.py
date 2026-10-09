@@ -111,6 +111,7 @@ out = {
     "sst": [], "ausentismoGH": [], "costoBonificacion": [], "cobroIncapacidades": [],
     "depuracionCartera": [], "nomina": [], "ingresos": [], "rotacion": [],
     "rotacionCausa": [], "rotacionCiudad": [], "capacitacionesDetalle": [],
+    "carteraInconsistencias": [],
 }
 
 # ── Gestión humana.xlsx ──────────────────────────────────────────────
@@ -302,6 +303,17 @@ if ws_dep is not None:
         row = [ws_dep.cell(row=r, column=c).value for c in range(1, ws_dep.max_column + 1)]
         a, b, c = g(row, 0), g(row, 1), g(row, 2)
         f_, gg, h, i = g(row, 3), g(row, 4), g(row, 5), g(row, 6)
+        # Tablita "Entidades | Valor de inconsistencia" (sept-2026): una fila por entidad,
+        # sin año/mes, hasta la fila TOTAL. Va aparte en carteraInconsistencias.
+        if a is not None and str(a).strip().lower().startswith("entidades") and "inconsistencia" in strip_accents(str(b or "")).lower():
+            current_categoria = "__inconsistencias__"
+            continue
+        if current_categoria == "__inconsistencias__":
+            if a is not None and not str(a).strip().lower().startswith("total") and as_num_or_none(b) is not None:
+                out["carteraInconsistencias"].append({"entidad": str(a).strip(), "valor": as_num_or_none(b)})
+            if a is not None and str(a).strip().lower().startswith("año"):
+                current_categoria = c
+            continue
         if a is not None and str(a).strip().lower().startswith("año"):
             current_categoria = c
             continue

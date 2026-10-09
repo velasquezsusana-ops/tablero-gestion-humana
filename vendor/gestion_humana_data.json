@@ -21487,5 +21487,31 @@
       "lugar": "Virtual ",
       "asistencia": "Comite COCOLA Central y Centro de trabajo "
     }
+  ],
+  "carteraInconsistencias": [
+    {
+      "entidad": "Salud Total",
+      "valor": 35749934.0
+    },
+    {
+      "entidad": "Nueva eps",
+      "valor": 7638185.0
+    },
+    {
+      "entidad": "Eps Sura",
+      "valor": 440899.0
+    },
+    {
+      "entidad": "Arl sura",
+      "valor": 291000.0
+    },
+    {
+      "entidad": "Sanitas",
+      "valor": 152600.0
+    },
+    {
+      "entidad": "Protección",
+      "valor": 348865.0
+    }
   ]
 }
