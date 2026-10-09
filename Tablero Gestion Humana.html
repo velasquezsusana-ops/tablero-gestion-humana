@@ -249,6 +249,10 @@
     background: var(--brand-dark);
   }
   footer strong { color: rgba(255,255,255,0.85); }
+  th.th-sort{cursor:pointer;user-select:none;white-space:nowrap}
+  th.th-sort .sort-ind{opacity:.45;font-size:.85em}
+  th.th-sort.sorted .sort-ind{opacity:1}
+  th.th-sort:hover{filter:brightness(.95)}
 </style>
 </head>
 <body>
@@ -379,7 +383,7 @@
       <div class="section-title">Datos — Plan de formación</div>
       <div class="table-wrap"><table class="data-table" id="tblFormacion"></table></div>
 
-      <div class="section-title">Detalle de capacitaciones — Excel CAPACITACIONES (<span id="capDetalleCount">0</span>)</div>
+      <div class="section-title">Detalle de capacitaciones</div>
       <div class="table-wrap"><table class="data-table" id="tblCapacitacionesDetalle"></table></div>
     </section>
 
@@ -1832,8 +1836,6 @@ function drawFormacionTab(){
 
   let capRows = sel==='Todos' ? DATA.capacitacionesDetalle : DATA.capacitacionesDetalle.filter(r=>String(r.anio)===String(sel));
   capRows = capRows.filter(r=>matchesMes(r, mesSel));
-  const capCountEl = document.getElementById('capDetalleCount');
-  if (capCountEl) capCountEl.textContent = capRows.length;
   renderTable('tblCapacitacionesDetalle',
     ['Capacitación','Fecha','Encargada','Lugar','Asistencia'],
     capRows.map(r=>[r.capacitacion, fmtDate(r.fecha), r.encargada||'—', r.lugar||'—', r.asistencia||'—'])
@@ -2626,9 +2628,68 @@ function drawRotacionCiudadCausa(){
 /* ---- generic table renderer ---- */
 function renderTable(tableId, headers, rows){
   const table = document.getElementById(tableId);
-  const thead = '<thead><tr>' + headers.map(h=>`<th>${h}</th>`).join('') + '</tr></thead>';
+  const thead = '<thead><tr>' + headers.map((h,i)=>`<th class="th-sort" data-col="${i}" title="Clic para ordenar">${h}<span class="sort-ind"> ⇅</span></th>`).join('') + '</tr></thead>';
   const tbody = '<tbody>' + rows.map(r=>'<tr>'+r.map(c=>`<td>${c==null?'—':c}</td>`).join('')+'</tr>').join('') + '</tbody>';
   table.innerHTML = thead + tbody;
+  // Si la tabla ya estaba ordenada por una columna (p.ej. al cambiar un filtro), se conserva ese orden.
+  const st = table.__sort;
+  if (st && st.col < headers.length) sortTableBy(table, st.col, st.dir);
+  if (!table.__sortBound){
+    table.__sortBound = true;
+    table.addEventListener('click', e=>{
+      const th = e.target.closest('th.th-sort');
+      if (!th || !table.contains(th)) return;
+      const col = Number(th.dataset.col);
+      const prev = table.__sort;
+      // 1er clic: mayor a menor; 2do clic en la misma columna: menor a mayor
+      const dir = (prev && prev.col===col && prev.dir==='desc') ? 'asc' : 'desc';
+      table.__sort = { col, dir };
+      sortTableBy(table, col, dir);
+    });
+  }
+}
+
+// Valor ordenable de una celda: números con formato colombiano ($ 1.234.567 · 4,8% · 1.234,5),
+// fechas ("04 de ago de 2026" o dd/mm/aaaa), meses ("Agosto") y, si no, texto.
+const SORT_MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+function sortKey(txt){
+  const t = String(txt||'').replace(/\u00a0/g,' ').trim();
+  if (!t || t==='—' || t==='-') return null;
+  let m = t.toLowerCase().match(/^(\d{1,2}) de ([a-zñ]+)\.? de (\d{4})$/);
+  if (m){ const mi = SORT_MESES.indexOf(m[2].slice(0,3)); if (mi>=0) return { n: new Date(+m[3], mi, +m[1]).getTime() }; }
+  m = t.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (m) return { n: new Date(+m[3], +m[2]-1, +m[1]).getTime() };
+  const mesIdx = SORT_MESES.indexOf(t.toLowerCase().slice(0,3));
+  if (mesIdx>=0 && /^[a-záéíóúñ]+$/i.test(t)) return { n: mesIdx };
+  const num = t.replace(/[$%\s]/g,'').replace(/\./g,'').replace(',', '.');
+  if (/^-?\d+(\.\d+)?$/.test(num)) return { n: parseFloat(num) };
+  return { s: t.toLowerCase() };
+}
+function sortTableBy(table, col, dir){
+  const tbody = table.tBodies[0];
+  if (!tbody) return;
+  const all = Array.from(tbody.rows);
+  // La fila TOTAL (si existe) se queda siempre al final
+  const fija = all.filter(r=>/^total/i.test((r.cells[0]&&r.cells[0].textContent||'').trim()));
+  const filas = all.filter(r=>!fija.includes(r));
+  const f = dir==='asc' ? 1 : -1;
+  filas.sort((a,b)=>{
+    const ka = sortKey(a.cells[col] && a.cells[col].textContent), kb = sortKey(b.cells[col] && b.cells[col].textContent);
+    if (ka===null && kb===null) return 0;
+    if (ka===null) return 1;            // vacíos siempre al final
+    if (kb===null) return -1;
+    if (ka.n!==undefined && kb.n!==undefined) return (ka.n-kb.n)*f;
+    if (ka.n!==undefined) return -1;
+    if (kb.n!==undefined) return 1;
+    return ka.s.localeCompare(kb.s,'es')*f;
+  });
+  filas.concat(fija).forEach(r=>tbody.appendChild(r));
+  table.querySelectorAll('th.th-sort').forEach(th=>{
+    const ind = th.querySelector('.sort-ind');
+    const on = Number(th.dataset.col)===col;
+    th.classList.toggle('sorted', on);
+    if (ind) ind.textContent = on ? (dir==='desc' ? ' ▼' : ' ▲') : ' ⇅';
+  });
 }
 
 /* ---------------------------------------------------------------- *
