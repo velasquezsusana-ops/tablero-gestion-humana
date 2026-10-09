@@ -47,6 +47,8 @@ const DATA_RAW = %s;
 DATA_RAW.nomina.forEach(r=>{ r.fechaIngreso = reviveDate(r.fechaIngreso); r.fechaContratoHasta = reviveDate(r.fechaContratoHasta); });
 DATA_RAW.ingresos.forEach(r=>{ r.fechaIngreso = reviveDate(r.fechaIngreso); r.fechaSolicitud = reviveDate(r.fechaSolicitud); r.fechaMaxima = reviveDate(r.fechaMaxima); });
 DATA_RAW.sst.forEach(r=>{ r.fecha = reviveDate(r.fecha); });
+DATA_RAW.capacitacionesDetalle.forEach(r=>{ r.fecha = reviveDate(r.fecha); });
+DATA_RAW.cobroIncapacidades.forEach(r=>{ r.fechaInicio = reviveDate(r.fechaInicio); r.fechaFin = reviveDate(r.fechaFin); r.fechaRadicado = reviveDate(r.fechaRadicado); r.fechaPago = reviveDate(r.fechaPago); });
 let DATA = DATA_RAW;
 """ % (data_compact,)
 
