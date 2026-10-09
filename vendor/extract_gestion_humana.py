@@ -257,12 +257,26 @@ if ws_aus is not None:
                     "dias": round(dias, 2) if dias is not None else None, "valor": valor,
                 })
     else:
-        for r in rows_from(ws_aus, 2):
-            if g(r, 0) is None and g(r, 1) is None and g(r, 2) is None:
+        # Formato lista (oct-2026): Año | Mes | Comcepto | Dias | Costo | Factor Prestacional
+        # (+ a la derecha una tablita con los % del factor, que se ignora). Columnas por encabezado.
+        head = [strip_accents(v or "").upper().strip() for v in (aus_rows[0] if aus_rows else [])]
+        def col(pred):
+            return next((k for k, h in enumerate(head) if pred(h)), None)
+        c_anio, c_mes = col(lambda h: h.startswith("ANO")), col(lambda h: h == "MES")
+        c_con = col(lambda h: "CEPTO" in h)
+        c_dias = col(lambda h: h.startswith("DIA"))
+        c_val = col(lambda h: h.startswith("COSTO") or h.startswith("VALOR"))
+        c_fac = col(lambda h: h.startswith("FACTOR"))
+        for r in aus_rows[1:]:
+            anio, mes, con = g(r, c_anio), g(r, c_mes), g(r, c_con)
+            if anio is None or mes is None or con is None:
                 continue
+            valor = as_num_or_none(g(r, c_val)) if c_val is not None else None
+            factor = as_num_or_none(g(r, c_fac)) if c_fac is not None else None
             out["ausentismoGH"].append({
-                "anio": g(r, 0), "mes": g(r, 1), "concepto": g(r, 2),
-                "dias": as_num_or_none(g(r, 3)), "valor": as_num_or_none(g(r, 4)),
+                "anio": anio, "mes": str(mes).strip().capitalize(), "concepto": str(con).strip(),
+                "dias": as_num_or_none(g(r, c_dias)), "valor": valor, "factorPrestacional": factor,
+                "costoTotal": (valor or 0) + (factor or 0) if (valor is not None or factor is not None) else None,
             })
 
 # Costo de Bonificación (hoja nueva, reestructurada a formato largo por concepto):

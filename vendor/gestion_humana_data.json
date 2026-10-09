@@ -409,339 +409,354 @@
   "ausentismoGH": [
     {
       "anio": 2026,
-      "mes": "Junio",
-      "concepto": "AUSENCIA SIN SOPORTE",
-      "dias": 139.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Julio",
-      "concepto": "AUSENCIA SIN SOPORTE",
-      "dias": 147.05,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "AUSENCIA SIN SOPORTE",
-      "dias": 159.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "AUSENCIA SIN SOPORTE",
-      "dias": 100.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "CALAMIDAD DOMESTICA",
-      "dias": 15.0,
-      "valor": 875454.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Julio",
-      "concepto": "CALAMIDAD DOMESTICA",
-      "dias": 20.01,
-      "valor": 1169208.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "CALAMIDAD DOMESTICA",
-      "dias": 3.0,
-      "valor": 175091.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "CALAMIDAD DOMESTICA",
-      "dias": 7.0,
-      "valor": 408545.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "INCAPACIDAD ACC LABORAL",
-      "dias": 33.0,
-      "valor": 2195027.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Julio",
-      "concepto": "INCAPACIDAD ACC LABORAL",
-      "dias": 45.01,
-      "valor": 3333976.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "INCAPACIDAD ACC LABORAL",
-      "dias": 9.0,
-      "valor": 601535.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "INCAPACIDAD ACC LABORAL",
-      "dias": 41.0,
-      "valor": 2420620.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "INCAPACIDAD EMPR DIAS",
-      "dias": 0.0,
-      "valor": 11717050.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Julio",
-      "concepto": "INCAPACIDAD EMPR DIAS",
-      "dias": 0.0,
-      "valor": 9582192.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "INCAPACIDAD EMPR DIAS",
-      "dias": 3.0,
-      "valor": 10086140.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "INCAPACIDAD EMPR DIAS",
-      "dias": 0.0,
-      "valor": 11240467.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "INCAPACIDAD GENERAL",
-      "dias": 478.0,
-      "valor": 13434510.0
-    },
-    {
-      "anio": 2026,
       "mes": "Julio",
       "concepto": "INCAPACIDAD GENERAL",
-      "dias": 461.12,
-      "valor": 13259395.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "INCAPACIDAD GENERAL",
-      "dias": 477.0,
-      "valor": 12607451.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "INCAPACIDAD GENERAL",
-      "dias": 478.0,
-      "valor": 11708870.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "LICENCIA DE MATERNIDAD",
-      "dias": 60.0,
-      "valor": 4527416.0
+      "dias": 461.0,
+      "valor": 13259395.0,
+      "factorPrestacional": 5154457.2123,
+      "costoTotal": 18413852.2123
     },
     {
       "anio": 2026,
       "mes": "Julio",
       "concepto": "LICENCIA DE MATERNIDAD",
-      "dias": 62.01,
-      "valor": 4678330.0
+      "dias": 62.0,
+      "valor": 4678330.0,
+      "factorPrestacional": 1818654.0041999999,
+      "costoTotal": 6496984.0042
     },
     {
       "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "LICENCIA DE MATERNIDAD",
-      "dias": 38.0,
-      "valor": 2949266.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "LICENCIA DE MATERNIDAD",
-      "dias": 3.0,
-      "valor": 236609.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
+      "mes": "Julio",
       "concepto": "LICENCIA DE PATERNIDAD",
-      "dias": 14.0,
-      "valor": 817089.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "LICENCIA NO REMUNERADA",
-      "dias": 30.0,
-      "valor": 0.0
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
     },
     {
       "anio": 2026,
       "mes": "Julio",
       "concepto": "LICENCIA NO REMUNERADA",
       "dias": 7.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "LICENCIA NO REMUNERADA",
-      "dias": 3.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "LICENCIA NO REMUNERADA",
-      "dias": 10.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "LICENCIA POR LUTO",
-      "dias": 25.0,
-      "valor": 1628954.0
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
     },
     {
       "anio": 2026,
       "mes": "Julio",
       "concepto": "LICENCIA POR LUTO",
       "dias": 5.0,
-      "valor": 291818.0
+      "valor": 291818.0,
+      "factorPrestacional": 113441.32931999999,
+      "costoTotal": 405259.32932
     },
     {
       "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "LICENCIA POR LUTO",
+      "mes": "Julio",
+      "concepto": "PERDIDA DOMINICAL",
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Julio",
+      "concepto": "PERMISO REMUNERADO",
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Julio",
+      "concepto": "SUSPENSION",
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Julio",
+      "concepto": "VACACIONES",
+      "dias": 370.0,
+      "valor": 20530622.0,
+      "factorPrestacional": 7981073.99628,
+      "costoTotal": 28511695.99628
+    },
+    {
+      "anio": 2026,
+      "mes": "Julio",
+      "concepto": "VACACIONES DIAS NO HABILES",
+      "dias": 0.0,
+      "valor": 3869100.0,
+      "factorPrestacional": 1504073.934,
+      "costoTotal": 5373173.934
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "AUSENCIA SIN SOPORTE",
+      "dias": 159.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "CALAMIDAD DOMESTICA",
+      "dias": 3.0,
+      "valor": 175091.0,
+      "factorPrestacional": 68064.87534,
+      "costoTotal": 243155.87534
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "INCAPACIDAD ACC LABORAL",
       "dias": 9.0,
-      "valor": 525272.0
+      "valor": 601535.0,
+      "factorPrestacional": 233840.71589999998,
+      "costoTotal": 835375.7159
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "INCAPACIDAD EMPR DIAS",
+      "dias": 3.0,
+      "valor": 10086140.0,
+      "factorPrestacional": 3920886.0635999995,
+      "costoTotal": 14007026.0636
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "INCAPACIDAD GENERAL",
+      "dias": 477.0,
+      "valor": 12607451.0,
+      "factorPrestacional": 4901020.501739999,
+      "costoTotal": 17508471.50174
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "LICENCIA DE MATERNIDAD",
+      "dias": 38.0,
+      "valor": 2949266.0,
+      "factorPrestacional": 1146497.66484,
+      "costoTotal": 4095763.6648399998
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "LICENCIA DE PATERNIDAD",
+      "dias": 14.0,
+      "valor": 817089.0,
+      "factorPrestacional": 317635.17786,
+      "costoTotal": 1134724.17786
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "LICENCIA NO REMUNERADA",
+      "dias": 3.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "LICENCIA POR LUTO",
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "PERDIDA DOMINICAL",
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
     },
     {
       "anio": 2026,
       "mes": "Agosto",
       "concepto": "PERMISO REMUNERADO",
       "dias": 6.0,
-      "valor": 350183.0
+      "valor": 350183.0,
+      "factorPrestacional": 136130.13942,
+      "costoTotal": 486313.13942
     },
     {
       "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "PERMISO REMUNERADO",
-      "dias": 7.0,
-      "valor": 408548.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
+      "mes": "Agosto",
       "concepto": "SUSPENSION",
-      "dias": 4.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Septiembre",
-      "concepto": "SUSPENSION",
-      "dias": 4.0,
-      "valor": 0.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "VACACIONES",
-      "dias": 211.0,
-      "valor": 11254197.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Julio",
-      "concepto": "VACACIONES",
-      "dias": 370.08,
-      "valor": 20530622.0
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
     },
     {
       "anio": 2026,
       "mes": "Agosto",
       "concepto": "VACACIONES",
       "dias": 547.0,
-      "valor": 30332954.0
+      "valor": 30332954.0,
+      "factorPrestacional": 11791632.537959998,
+      "costoTotal": 42124586.53796
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "concepto": "VACACIONES DIAS NO HABILES",
+      "dias": 0.0,
+      "valor": 8337389.0,
+      "factorPrestacional": 3241076.59986,
+      "costoTotal": 11578465.59986
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "AUSENCIA SIN SOPORTE",
+      "dias": 100.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "CALAMIDAD DOMESTICA",
+      "dias": 7.0,
+      "valor": 408545.0,
+      "factorPrestacional": 158817.78329999998,
+      "costoTotal": 567362.7833
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "INCAPACIDAD ACC LABORAL",
+      "dias": 41.0,
+      "valor": 2420620.0,
+      "factorPrestacional": 940991.8187999999,
+      "costoTotal": 3361611.8188
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "INCAPACIDAD EMPR DIAS",
+      "dias": 0.0,
+      "valor": 11240467.0,
+      "factorPrestacional": 4369619.14158,
+      "costoTotal": 15610086.14158
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "INCAPACIDAD GENERAL",
+      "dias": 478.0,
+      "valor": 11708870.0,
+      "factorPrestacional": 4551706.123799999,
+      "costoTotal": 16260576.123799998
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "LICENCIA DE MATERNIDAD",
+      "dias": 3.0,
+      "valor": 236609.0,
+      "factorPrestacional": 91979.38265999999,
+      "costoTotal": 328588.38266
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "LICENCIA DE PATERNIDAD",
+      "dias": 0.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "LICENCIA NO REMUNERADA",
+      "dias": 10.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "LICENCIA POR LUTO",
+      "dias": 9.0,
+      "valor": 525272.0,
+      "factorPrestacional": 204194.23727999997,
+      "costoTotal": 729466.23728
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "PERMISO REMUNERADO",
+      "dias": 7.0,
+      "valor": 408548.0,
+      "factorPrestacional": 158818.94952,
+      "costoTotal": 567366.94952
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "concepto": "SUSPENSION",
+      "dias": 4.0,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
     },
     {
       "anio": 2026,
       "mes": "Septiembre",
       "concepto": "VACACIONES",
       "dias": 339.0,
-      "valor": 20409283.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "VACACIONES DIAS NO HABILES",
-      "dias": 0.0,
-      "valor": 3358462.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Julio",
-      "concepto": "VACACIONES DIAS NO HABILES",
-      "dias": 0.0,
-      "valor": 3869100.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "VACACIONES DIAS NO HABILES",
-      "dias": 0.0,
-      "valor": 8337389.0
+      "valor": 20409283.0,
+      "factorPrestacional": 7933904.67342,
+      "costoTotal": 28343187.67342
     },
     {
       "anio": 2026,
       "mes": "Septiembre",
       "concepto": "VACACIONES DIAS NO HABILES",
       "dias": 0.0,
-      "valor": 1953750.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Agosto",
-      "concepto": "VACACIONES QUINQUENIO",
-      "dias": 1.0,
-      "valor": 67367.0
+      "valor": 1953750.0,
+      "factorPrestacional": 759500.7749999999,
+      "costoTotal": 2713250.775
     },
     {
       "anio": 2026,
       "mes": "Septiembre",
       "concepto": "VACACIONES QUINQUENIO",
       "dias": 1.0,
-      "valor": 58364.0
-    },
-    {
-      "anio": 2026,
-      "mes": "Junio",
-      "concepto": "PERDIDA DOMINICAL",
-      "dias": 2.0,
-      "valor": 0.0
+      "valor": 58364.0,
+      "factorPrestacional": 22688.42136,
+      "costoTotal": 81052.42136000001
     },
     {
       "anio": 2026,
       "mes": "Septiembre",
       "concepto": "PERDIDA DOMINICAL",
-      "dias": 1.91,
-      "valor": 0.0
+      "dias": 1.9090909090909092,
+      "valor": 0.0,
+      "factorPrestacional": 0.0,
+      "costoTotal": 0
     }
   ],
   "costoBonificacion": [
