@@ -111,7 +111,7 @@ out = {
     "sst": [], "ausentismoGH": [], "costoBonificacion": [], "cobroIncapacidades": [],
     "depuracionCartera": [], "nomina": [], "ingresos": [], "rotacion": [],
     "rotacionCausa": [], "rotacionCiudad": [], "capacitacionesDetalle": [],
-    "carteraInconsistencias": [],
+    "carteraInconsistencias": [], "aprendices": [],
 }
 
 # ── Gestión humana.xlsx ──────────────────────────────────────────────
@@ -421,6 +421,53 @@ for sn in wb_ing.sheetnames:
         extract_ingresos(wb_ing[sn], sn.strip(), OTHER_SHEETS[key])
     else:
         extract_ingresos(wb_ing[sn], sn.strip(), "ciudad")
+
+# ── INGRESOS.xlsx / hoja APRENDICES ───────────────────────────────────
+# Columnas por encabezado (esta hoja trae "FECHA DE FINALIZACION" que las otras no tienen).
+# La sede (CO) y el área (centro de costo) salen de la nómina, cruzando el nombre por
+# palabras: en INGRESOS va "NOMBRES APELLIDOS" y en la nómina "APELLIDOS NOMBRES".
+def _tokens(s):
+    return set(strip_accents(s or "").upper().split())
+
+def match_nomina(nombre):
+    a = _tokens(nombre)
+    if not a:
+        return None
+    cands = [r for r in out["nomina"] if "APRENDIZ" in strip_accents(r.get("cargo") or "").upper()] or out["nomina"]
+    best, k = None, 0
+    for r in cands:
+        kk = len(a & _tokens(r.get("nombre")))
+        if kk > k:
+            best, k = r, kk
+    return best if k >= 2 and k >= min(3, len(a) - 1) else None
+
+for sn in wb_ing.sheetnames:
+    if strip_accents(sn).strip().upper() != "APRENDICES":
+        continue
+    ws_ap = wb_ing[sn]
+    head = [strip_accents(ws_ap.cell(row=1, column=c).value or "").upper().strip() for c in range(1, ws_ap.max_column + 1)]
+    def hcol(pred):
+        return next((k for k, h in enumerate(head) if pred(h)), None)
+    c_nom, c_car, c_est = hcol(lambda h: h.startswith("NOMBRE")), hcol(lambda h: h == "CARGO"), hcol(lambda h: h == "ESTADO")
+    c_ing = hcol(lambda h: h.startswith("FECHA DE INGRESO"))
+    c_fin = hcol(lambda h: h.startswith("FECHA DE FIN"))
+    c_pto = hcol(lambda h: h == "PUNTO")
+    for r in rows_from(ws_ap, 2):
+        nombre = g(r, c_nom) if c_nom is not None else None
+        if not nombre or not str(nombre).strip():
+            continue
+        m = match_nomina(nombre)
+        out["aprendices"].append({
+            "nombre": str(nombre).strip(),
+            "programa": str(g(r, c_car)).strip() if c_car is not None and g(r, c_car) else None,
+            "estado": str(g(r, c_est)).strip().upper() if c_est is not None and g(r, c_est) else None,
+            "fechaIngreso": as_date(g(r, c_ing)) if c_ing is not None else None,
+            "fechaFin": as_date(g(r, c_fin)) if c_fin is not None else None,
+            "sede": (g(r, c_pto) if c_pto is not None else None) or (m["co"] if m else None),
+            "area": m["centroCosto"] if m else None,
+            "cargoNomina": m["cargo"] if m else None,
+        })
+out["aprendices"].sort(key=lambda x: x["fechaFin"] or "9999")
 
 # ── ROTACION..xlsx ────────────────────────────────────────────────────
 MES_ALIASES = {
