@@ -249,6 +249,7 @@
     background: var(--brand-dark);
   }
   footer strong { color: rgba(255,255,255,0.85); }
+  tr.row-total td{font-weight:700;background:var(--brand-ghost, rgba(122,26,46,.06));border-top:2px solid rgba(122,26,46,.25)}
   th.th-sort{cursor:pointer;user-select:none;white-space:nowrap}
   th.th-sort .sort-ind{opacity:.45;font-size:.85em}
   th.th-sort.sorted .sort-ind{opacity:1}
@@ -2094,7 +2095,21 @@ function drawCostoContratacion(){
       r.valorUnitarioVirtual==null?'—':fmtMoney(r.valorUnitarioVirtual), r.cantidadVirtual==null?'—':fmtNum(r.cantidadVirtual),
       fmtMoney(r.total), r.totalCostoMujer==null?'—':fmtMoney(r.totalCostoMujer), r.totalCostoHombre==null?'—':fmtMoney(r.totalCostoHombre),
       r.empleadosMujer==null?'—':fmtNum(r.empleadosMujer), r.empleadosHombre==null?'—':fmtNum(r.empleadosHombre), r.empleadosContratados==null?'—':fmtNum(r.empleadosContratados), r.costoEmpleado==null?'—':fmtMoney(r.costoEmpleado)])
+    .concat(rows.length ? [costoContratacionTotalRow(rows)] : [])
   );
+}
+// Fila TOTAL de "Costo de contratación": suma cada columna de $ y de cantidades.
+// Los valores unitarios no se suman: se muestra el promedio. Costo/empleado = Total / Empleados contratados.
+function costoContratacionTotalRow(rows){
+  const sum = k => rows.reduce((s,r)=>s+(Number(r[k])||0),0);
+  const prom = k => { const v = rows.map(r=>r[k]).filter(x=>x!=null); return v.length ? 'prom. ' + fmtMoney(v.reduce((a,b)=>a+b,0)/v.length) : '—'; };
+  const total = sum('total'), emp = sum('empleadosContratados');
+  return ['TOTAL', '', '',
+    fmtMoney(sum('examenesMedicosMujer')), fmtMoney(sum('examenesMedicosHombre')), fmtMoney(sum('estudioConfiabilidad')),
+    fmtMoney(sum('dotacion')), fmtMoney(sum('cursoBpm')),
+    prom('valorUnitarioPresencial'), fmtNum(sum('cantidadPresencial')), prom('valorUnitarioVirtual'), fmtNum(sum('cantidadVirtual')),
+    fmtMoney(total), fmtMoney(sum('totalCostoMujer')), fmtMoney(sum('totalCostoHombre')),
+    fmtNum(sum('empleadosMujer')), fmtNum(sum('empleadosHombre')), fmtNum(emp), emp ? fmtMoney(total/emp) : '—'];
 }
 
 /* ---- SST tab (accidentes laborales) ---- */
@@ -2648,7 +2663,7 @@ function drawRotacionCiudadCausa(){
 function renderTable(tableId, headers, rows){
   const table = document.getElementById(tableId);
   const thead = '<thead><tr>' + headers.map((h,i)=>`<th class="th-sort" data-col="${i}" title="Clic para ordenar">${h}<span class="sort-ind"> ⇅</span></th>`).join('') + '</tr></thead>';
-  const tbody = '<tbody>' + rows.map(r=>'<tr>'+r.map(c=>`<td>${c==null?'—':c}</td>`).join('')+'</tr>').join('') + '</tbody>';
+  const tbody = '<tbody>' + rows.map(r=>(/^total/i.test(String(r[0]||'').trim()) ? '<tr class="row-total">' : '<tr>')+r.map(c=>`<td>${c==null?'—':c}</td>`).join('')+'</tr>').join('') + '</tbody>';
   table.innerHTML = thead + tbody;
   // Si la tabla ya estaba ordenada por una columna (p.ej. al cambiar un filtro), se conserva ese orden.
   const st = table.__sort;
