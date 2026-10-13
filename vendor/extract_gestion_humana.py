@@ -81,10 +81,20 @@ def parse_money(v):
         return None
 
 
-def find_sheet(wb, wanted_name):
+def _norm_hoja(n):
+    return " ".join(strip_accents(str(n)).lower().split())
+
+
+def find_sheet(wb, wanted_name, prefijo=None):
+    """Busca la hoja sin importar tildes, mayúsculas ni espacios de más. Si no aparece y se da
+    `prefijo`, sirve la primera hoja cuyo nombre empiece así (p.ej. "Rotación de pesonal ")."""
     for n in wb.sheetnames:
-        if n.strip() == wanted_name.strip():
+        if _norm_hoja(n) == _norm_hoja(wanted_name):
             return wb[n]
+    if prefijo:
+        for n in wb.sheetnames:
+            if _norm_hoja(n).startswith(_norm_hoja(prefijo)):
+                return wb[n]
     return None
 
 
@@ -115,7 +125,22 @@ out = {
 }
 
 # ── Gestión humana.xlsx ──────────────────────────────────────────────
-gh_file = next(f for f in os.listdir(DATA_DIR) if f.lower().startswith("gesti") and f.lower().endswith(".xlsx") and not f.startswith("~$"))
+# Los archivos se buscan por el comienzo del nombre ("ROTACION..xlsx" o "ROTACION.xlsx" sirven igual),
+# ignorando las copias viejas que se guardan al lado ("... ultima version", "respaldo", "backup", "copia").
+def es_respaldo(f):
+    n = strip_accents(f).lower()
+    return f.startswith("~$") or any(w in n for w in ("ultima version", "respaldo", "backup", "copia"))
+
+def buscar_xlsx(prefijo, obligatorio=True):
+    cands = [f for f in os.listdir(DATA_DIR)
+             if strip_accents(f).lower().startswith(prefijo) and f.lower().endswith(".xlsx") and not es_respaldo(f)]
+    if not cands:
+        if obligatorio:
+            raise SystemExit(f'No encontré el archivo "{prefijo}*.xlsx" en {DATA_DIR}')
+        return None
+    return max(cands, key=lambda f: os.path.getmtime(os.path.join(DATA_DIR, f)))
+
+gh_file = buscar_xlsx("gesti")
 wb_gh = openpyxl.load_workbook(os.path.join(DATA_DIR, gh_file), data_only=True)
 
 for r in rows_from(find_sheet(wb_gh, "Clima organizacional"), 2):
@@ -296,7 +321,7 @@ for r in rows_from(find_sheet(wb_gh, "Costo de Bonificación"), 2):
 # Valor a recuperar,Valor pagado,Fecha de pago,Estado del pago
 # Desde oct-2026 viene en su propio archivo "Incapacidades.xlsx" (mismas columnas); si existe,
 # manda ese, si no se usa la hoja del Excel de Gestión humana.
-inc_file = next((f for f in os.listdir(DATA_DIR) if f.lower().startswith("incapacidad") and f.lower().endswith(".xlsx") and not f.startswith("~$")), None)
+inc_file = buscar_xlsx("incapacidad", obligatorio=False)
 ws_inc = openpyxl.load_workbook(os.path.join(DATA_DIR, inc_file), data_only=True).worksheets[0] if inc_file else find_sheet(wb_gh, "Cobro de incapacidades")
 for r in rows_from(ws_inc, 2):
     if g(r, 0) is None and g(r, 1) is None and g(r, 2) is None:
@@ -344,7 +369,7 @@ if ws_dep is not None:
 
 # Rotación de personal — causas (hoja nueva): matriz Causa x Mes(2026) con
 # encabezados de fecha en la fila 3; cada celda no vacía = # retiros de esa causa ese mes.
-ws_rotcausa = find_sheet(wb_gh, "Rotacion de personal")
+ws_rotcausa = find_sheet(wb_gh, "Rotacion de personal", prefijo="Rotacion de pe")
 if ws_rotcausa is not None:
     header_row = [ws_rotcausa.cell(row=3, column=c).value for c in range(1, ws_rotcausa.max_column + 1)]
     month_cols = [(i, v.year, MESES[v.month - 1]) for i, v in enumerate(header_row)
@@ -396,7 +421,7 @@ out["nomina"].sort(key=lambda x: x["nombre"] or "")
 # cualquier hoja que no esté en NON_CITY_SHEETS ni en OTHER_SHEETS se trata como ciudad.
 NON_CITY_SHEETS = {"FESTIVOS", "CARGOS Y ESTADOS", "HOJA1"}
 OTHER_SHEETS = {"NO CRITICOS": "no_criticos", "TEMPORADA": "temporada", "APRENDICES": "aprendices"}
-wb_ing = openpyxl.load_workbook(os.path.join(DATA_DIR, "INGRESOS.xlsx"), data_only=True)
+wb_ing = openpyxl.load_workbook(os.path.join(DATA_DIR, buscar_xlsx("ingresos")), data_only=True)
 
 def extract_ingresos(ws, ciudad, tipo):
     for r in rows_from(ws, 2):
@@ -573,7 +598,7 @@ def extract_rotacion_metrics(ws):
     return res
 
 
-wb_rot = openpyxl.load_workbook(os.path.join(DATA_DIR, "ROTACION..xlsx"), data_only=True)
+wb_rot = openpyxl.load_workbook(os.path.join(DATA_DIR, buscar_xlsx("rotacion")), data_only=True)
 carry_year = None
 seen_periods = {}
 for sn in wb_rot.sheetnames:
@@ -600,11 +625,13 @@ out["rotacion"].sort(key=lambda x: period_key(x["anio"], x["mes"]))
 out["rotacionCiudad"].sort(key=lambda x: period_key(x["anio"], x["mes"]))
 
 # En los Excel a veces el mes viene con espacios ("Septiembre "): se limpian para que
-# ordene, filtre y cruce bien con el detalle de CAPACITACIONES.
+# ordene, filtre y cruce bien con el detalle de CAPACITACIONES. También "julio" -> "Julio".
 for _lista in out.values():
     for _r in _lista:
         if isinstance(_r.get("mes"), str):
             _r["mes"] = _r["mes"].strip()
+            if _r["mes"].capitalize() in MESES:
+                _r["mes"] = _r["mes"].capitalize()
 out["formacion"].sort(key=lambda x: period_key(x["anio"], x["mes"]))
 out["costo"].sort(key=lambda x: period_key(x["anio"], x["mes"]))
 
