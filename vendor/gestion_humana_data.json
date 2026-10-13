@@ -1172,9 +1172,9 @@
       "salario": 1750905.0,
       "diasACobrar": 13.0,
       "valorCobradas": 758725.5,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 758726.0,
+      "fechaPago": "2026-09-25",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Mayo",
@@ -1615,7 +1615,7 @@
       "valorCobradas": 58363.5,
       "valorPagadas": 58364.0,
       "fechaPago": "2026-08-21",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Mayo",
@@ -1678,7 +1678,7 @@
       "valorCobradas": 1634178.0,
       "valorPagadas": 1634178.0,
       "fechaPago": "2026-08-21",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Mayo",
@@ -1699,7 +1699,7 @@
       "valorCobradas": 58363.5,
       "valorPagadas": 58364.0,
       "fechaPago": null,
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Mayo",
@@ -2014,7 +2014,7 @@
       "valorCobradas": 58363.5,
       "valorPagadas": 58364.0,
       "fechaPago": null,
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Junio",
@@ -2138,9 +2138,9 @@
       "salario": 1750905.0,
       "diasACobrar": 28.0,
       "valorCobradas": 1634178.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 1634192.0,
+      "fechaPago": "2026-09-25",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Junio",
@@ -2539,7 +2539,7 @@
       "valorCobradas": 58363.5,
       "valorPagadas": 58364.0,
       "fechaPago": "2026-08-27",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Junio",
@@ -2560,7 +2560,7 @@
       "valorCobradas": 687868.0,
       "valorPagadas": 687868.0,
       "fechaPago": "2026-08-26",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Junio",
@@ -2579,8 +2579,8 @@
       "salario": 1750905.0,
       "diasACobrar": 11.0,
       "valorCobradas": 641998.5,
-      "valorPagadas": null,
-      "fechaPago": null,
+      "valorPagadas": 641999.0,
+      "fechaPago": "2026-09-16",
       "estadoPago": null
     },
     {
@@ -2791,7 +2791,7 @@
       "valorCobradas": 357571.0,
       "valorPagadas": 357571.0,
       "fechaPago": "2026-08-26",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Junio",
@@ -2980,7 +2980,7 @@
       "valorCobradas": 556258.0,
       "valorPagadas": 556258.0,
       "fechaPago": "2026-08-26",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Junio",
@@ -3085,7 +3085,7 @@
       "valorCobradas": 210984.0,
       "valorPagadas": 210984.0,
       "fechaPago": "2026-08-26",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3146,9 +3146,9 @@
       "salario": 1750905.0,
       "diasACobrar": 2.0,
       "valorCobradas": 116727.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 233454.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3211,7 +3211,7 @@
       "valorCobradas": 856264.0,
       "valorPagadas": 856264.0,
       "fechaPago": "2026-08-26",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3295,7 +3295,7 @@
       "valorCobradas": 290767.0,
       "valorPagadas": 290767.0,
       "fechaPago": "2026-09-01",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3736,7 +3736,7 @@
       "valorCobradas": 351640.0,
       "valorPagadas": 351640.0,
       "fechaPago": "2026-08-26",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3755,9 +3755,9 @@
       "salario": 1750905.0,
       "diasACobrar": 1.0,
       "valorCobradas": 58363.5,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 58364.0,
+      "fechaPago": "2026-09-10",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3778,7 +3778,7 @@
       "valorCobradas": 95069.0,
       "valorPagadas": 95069.0,
       "fechaPago": "2026-09-01",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -3839,8 +3839,8 @@
       "salario": 1750905.0,
       "diasACobrar": 13.0,
       "valorCobradas": 758725.5,
-      "valorPagadas": null,
-      "fechaPago": null,
+      "valorPagadas": 758726.0,
+      "fechaPago": "2026-09-16",
       "estadoPago": null
     },
     {
@@ -3946,7 +3946,7 @@
       "valorCobradas": 406084.0,
       "valorPagadas": 406084.0,
       "fechaPago": "2026-09-01",
-      "estadoPago": null
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Julio",
@@ -4049,9 +4049,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 58364.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 58364.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4070,9 +4070,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 194056.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 233382.0,
+      "fechaPago": "2026-09-15",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4154,9 +4154,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 58364.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 58364.0,
+      "fechaPago": "2026-09-15",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4175,9 +4175,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 58364.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 175091.0,
+      "fechaPago": "2026-09-15",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4217,9 +4217,9 @@
       "salario": 1750905.0,
       "diasACobrar": 7.0,
       "valorCobradas": 291818.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 408545.0,
+      "fechaPago": "2026-09-24",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4280,9 +4280,9 @@
       "salario": 1750905.0,
       "diasACobrar": 14.0,
       "valorCobradas": 817089.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 817089.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4301,9 +4301,9 @@
       "salario": 1750905.0,
       "diasACobrar": 6.0,
       "valorCobradas": 350181.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 350181.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4322,9 +4322,9 @@
       "salario": 1750905.0,
       "diasACobrar": 27.0,
       "valorCobradas": 1575815.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 1750905.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4367,6 +4367,27 @@
       "valorPagadas": null,
       "fechaPago": null,
       "estadoPago": null
+    },
+    {
+      "mes": "Julio",
+      "anio": 2026,
+      "cedula": 1053873691,
+      "nombre": "RODRIGUEZ HERNANDEZ LULY GABRIELA.",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-07-03",
+      "fechaFin": "2026-07-05",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "NUEVA EPS",
+      "radicado": 2634933,
+      "gestiona": "SI",
+      "fechaRadicado": null,
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 175091.0,
+      "valorPagadas": 175091.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4637,9 +4658,9 @@
       "salario": 1750905.0,
       "diasACobrar": 5.0,
       "valorCobradas": 175091.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 175091.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4658,9 +4679,9 @@
       "salario": 1750905.0,
       "diasACobrar": 2.0,
       "valorCobradas": 137230.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 84054.0,
+      "fechaPago": "2026-09-15",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4700,9 +4721,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 58364.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 58364.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4721,9 +4742,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 193617.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 155539.0,
+      "fechaPago": "2026-09-15",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4805,9 +4826,9 @@
       "salario": 1750905.0,
       "diasACobrar": 4.0,
       "valorCobradas": 116727.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 116727.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4910,9 +4931,9 @@
       "salario": 1750905.0,
       "diasACobrar": 3.0,
       "valorCobradas": 58364.0,
-      "valorPagadas": null,
-      "fechaPago": null,
-      "estadoPago": null
+      "valorPagadas": 58364.0,
+      "fechaPago": "2026-09-16",
+      "estadoPago": "PAGADA"
     },
     {
       "mes": "Agosto",
@@ -4980,6 +5001,69 @@
     {
       "mes": "Septiembre",
       "anio": 2026,
+      "cedula": 1000871808,
+      "nombre": "MOSQUERA COSSIO PAULA ANDREA",
+      "tipoNovedad": "INCAPACIDAD ACC LABORAL",
+      "fechaInicio": "2026-09-11",
+      "fechaFin": "2026-09-13",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "ARL SURA",
+      "radicado": 132080684188,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-07",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 202805.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1002089656,
+      "nombre": "MONTOYA GARCIA DEISY VANESA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-07",
+      "fechaFin": "2026-09-09",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
+      "radicado": 10082613574,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-08",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1003098021,
+      "nombre": "MARTINEZ FLOREZ YUDIS SAMIRA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-01",
+      "fechaFin": "2026-09-03",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "NUEVA EPS",
+      "radicado": 2746177,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
       "cedula": 1003140447,
       "nombre": "DIAZ JULIO LIS JOHANA",
       "tipoNovedad": "INCAPACIDAD GENERAL",
@@ -4987,13 +5071,76 @@
       "fechaFin": "2026-09-20",
       "diasNovedad": 5.0,
       "administradoraSalud": "EPS SURA",
-      "radicado": null,
-      "gestiona": null,
-      "fechaRadicado": null,
+      "radicado": "SE HACE SOLICITUD DE TRANSCRIPCION POR MEDIO DE LA PLATAFORMA EMPRESA, LA EMPLEADA ENVIA LOS DOC",
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
       "observacion": "Se intenta comunicación el 8/10/2026  304 2915403",
       "salario": null,
       "diasACobrar": 5.0,
       "valorCobradas": 176953.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1003737930,
+      "nombre": "QUINTERO MARTINEZ GEIDIS ROSA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-02",
+      "fechaFin": "2026-09-04",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "COMPENSAR",
+      "radicado": "EN20260000908795",
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-08",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1005710199,
+      "nombre": "MUNZON DIAZ KATY LUZ",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-23",
+      "fechaFin": "2026-09-25",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
+      "radicado": 10082614496,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-08",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 59510.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1007524718,
+      "nombre": "BURGOS CASTILLO VALENTINA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-16",
+      "fechaFin": "2026-09-18",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "NUEVA EPS",
+      "radicado": 2746265,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
       "valorPagadas": null,
       "fechaPago": null,
       "estadoPago": null
@@ -5064,6 +5211,27 @@
     {
       "mes": "Septiembre",
       "anio": 2026,
+      "cedula": 1038822799,
+      "nombre": "RUIZ CAICEDO NELSON ENRIQUE",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-10",
+      "fechaFin": "2026-09-12",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "ALIANZA MEDELLIN ANTIOQUIA EPS SAS ( SAVIA SALUD)",
+      "radicado": 1100801568,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-09-28",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
       "cedula": 1041971643,
       "nombre": "ACEVEDO ARELLANO EMILY GABRIELA",
       "tipoNovedad": "INCAPACIDAD GENERAL",
@@ -5085,6 +5253,48 @@
     {
       "mes": "Septiembre",
       "anio": 2026,
+      "cedula": 1045417434,
+      "nombre": "ARROYAVE YEPES JOHAN ALEXIS",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-17",
+      "fechaFin": "2026-09-19",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "ALIANZA MEDELLIN ANTIOQUIA EPS SAS ( SAVIA SALUD)",
+      "radicado": 1100801595,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-09-28",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 65004.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1053869620,
+      "nombre": "ARIAS BUSTAMANTE CAMILA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-16",
+      "fechaFin": "2026-09-18",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "NUEVA EPS",
+      "radicado": 2746600,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
       "cedula": 1053873691,
       "nombre": "RODRIGUEZ HERNANDEZ LULY GABRIELA",
       "tipoNovedad": "INCAPACIDAD GENERAL",
@@ -5092,9 +5302,9 @@
       "fechaFin": "2026-09-14",
       "diasNovedad": 14.0,
       "administradoraSalud": "NUEVA EPS",
-      "radicado": null,
-      "gestiona": null,
-      "fechaRadicado": null,
+      "radicado": 2746893,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
       "observacion": null,
       "salario": null,
       "diasACobrar": 14.0,
@@ -5113,9 +5323,9 @@
       "fechaFin": "2026-10-03",
       "diasNovedad": 15.0,
       "administradoraSalud": "NUEVA EPS",
-      "radicado": null,
-      "gestiona": null,
-      "fechaRadicado": null,
+      "radicado": 2746899,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
       "observacion": null,
       "salario": null,
       "diasACobrar": 15.0,
@@ -5155,9 +5365,9 @@
       "fechaFin": "2026-09-15",
       "diasNovedad": 15.0,
       "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
-      "radicado": null,
-      "gestiona": null,
-      "fechaRadicado": null,
+      "radicado": "PQR- 1009268570",
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
       "observacion": null,
       "salario": null,
       "diasACobrar": 15.0,
@@ -5176,13 +5386,55 @@
       "fechaFin": "2026-09-24",
       "diasNovedad": 9.0,
       "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
-      "radicado": null,
-      "gestiona": null,
-      "fechaRadicado": null,
+      "radicado": "PQR-1009268570",
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
       "observacion": null,
       "salario": null,
       "diasACobrar": 9.0,
       "valorCobradas": 525272.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1070821291,
+      "nombre": "GUERRA VASQUEZ EUCARIS ELIANA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-08",
+      "fechaFin": "2026-09-10",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
+      "radicado": 10092611659,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1111539998,
+      "nombre": "VILLAMIL VIDAL ANGELLY SOFIA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-16",
+      "fechaFin": "2026-09-18",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "COMFENALCO VALLE EPS",
+      "radicado": 25029263,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-08",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 77297.0,
       "valorPagadas": null,
       "fechaPago": null,
       "estadoPago": null
@@ -5239,9 +5491,9 @@
       "fechaFin": "2026-09-22",
       "diasNovedad": 5.0,
       "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
-      "radicado": null,
-      "gestiona": null,
-      "fechaRadicado": null,
+      "radicado": 10092613803,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
       "observacion": null,
       "salario": null,
       "diasACobrar": 5.0,
@@ -5263,10 +5515,73 @@
       "radicado": null,
       "gestiona": null,
       "fechaRadicado": null,
-      "observacion": null,
+      "observacion": "EMPLEADA HOSPITALIZADA",
       "salario": null,
       "diasACobrar": 8.0,
       "valorCobradas": 350181.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1152469794,
+      "nombre": "ACOSTA BOHORQUEZ KAREN DAYANA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-02",
+      "fechaFin": "2026-09-04",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "SALUD TOTAL S.A ENTIDAD PROMOTORA DE SALUD",
+      "radicado": 10092618368,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1193263264,
+      "nombre": "DUEÑAS OSORIO JHON ALEXANDER",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-25",
+      "fechaFin": "2026-09-27",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "NUEVA EPS",
+      "radicado": 2746934,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1193263264,
+      "nombre": "DUEÑAS OSORIO JHON ALEXANDER",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-22",
+      "fechaFin": "2026-09-24",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "NUEVA EPS",
+      "radicado": 2746939,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-09",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
       "valorPagadas": null,
       "fechaPago": null,
       "estadoPago": null
@@ -5284,10 +5599,52 @@
       "radicado": null,
       "gestiona": null,
       "fechaRadicado": null,
-      "observacion": null,
+      "observacion": "INCAPACIDAD POR ACCIDENTE DE TRANSITO SE SOLICITA AL ADMINISTRADOR LOS DOCUMENTOS SOPORTES",
       "salario": null,
       "diasACobrar": 5.0,
       "valorCobradas": 182664.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 1235253622,
+      "nombre": "SUAREZ URIANA ENZON ADAN",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-01",
+      "fechaFin": "2026-09-03",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "ALIANZA MEDELLIN ANTIOQUIA EPS SAS ( SAVIA SALUD)",
+      "radicado": 1100801604,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-09-28",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 21470713,
+      "nombre": "MONSALVE MAYA SANDRA PATRICIA",
+      "tipoNovedad": "INCAPACIDAD GENERAL",
+      "fechaInicio": "2026-09-04",
+      "fechaFin": "2026-09-06",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "EPS SURA",
+      "radicado": 12144305,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-09-28",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
+      "valorCobradas": 58364.0,
       "valorPagadas": null,
       "fechaPago": null,
       "estadoPago": null
@@ -5308,6 +5665,27 @@
       "observacion": null,
       "salario": null,
       "diasACobrar": 5.0,
+      "valorCobradas": 175091.0,
+      "valorPagadas": null,
+      "fechaPago": null,
+      "estadoPago": null
+    },
+    {
+      "mes": "Septiembre",
+      "anio": 2026,
+      "cedula": 43250162,
+      "nombre": "ORTIZ ALVAREZ DIANA MARCELA",
+      "tipoNovedad": "INCAPACIDAD ACC LABORAL",
+      "fechaInicio": "2026-09-08",
+      "fechaFin": "2026-09-10",
+      "diasNovedad": 3.0,
+      "administradoraSalud": "ARL SURA",
+      "radicado": 717338786136,
+      "gestiona": "SI",
+      "fechaRadicado": "2026-10-08",
+      "observacion": null,
+      "salario": null,
+      "diasACobrar": 3.0,
       "valorCobradas": 175091.0,
       "valorPagadas": null,
       "fechaPago": null,

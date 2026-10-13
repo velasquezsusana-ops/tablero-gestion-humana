@@ -294,7 +294,11 @@ for r in rows_from(find_sheet(wb_gh, "Costo de Bonificación"), 2):
 # Mes,Año,Cédula,Nombre,Tipo de Novedad,Fecha inicio,Fecha fin,Días de novedad,Eps,
 # Radicado/Trámite,Gestiona S/N,Fecha de radicado,Observación,Salario,Días a cobrar,
 # Valor a recuperar,Valor pagado,Fecha de pago,Estado del pago
-for r in rows_from(find_sheet(wb_gh, "Cobro de incapacidades"), 2):
+# Desde oct-2026 viene en su propio archivo "Incapacidades.xlsx" (mismas columnas); si existe,
+# manda ese, si no se usa la hoja del Excel de Gestión humana.
+inc_file = next((f for f in os.listdir(DATA_DIR) if f.lower().startswith("incapacidad") and f.lower().endswith(".xlsx") and not f.startswith("~$")), None)
+ws_inc = openpyxl.load_workbook(os.path.join(DATA_DIR, inc_file), data_only=True).worksheets[0] if inc_file else find_sheet(wb_gh, "Cobro de incapacidades")
+for r in rows_from(ws_inc, 2):
     if g(r, 0) is None and g(r, 1) is None and g(r, 2) is None:
         continue
     out["cobroIncapacidades"].append({
