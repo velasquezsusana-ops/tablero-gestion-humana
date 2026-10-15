@@ -3215,9 +3215,10 @@ function drawRotacionCiudadCausa(){
 
   const totP = ciudades.reduce((s,c)=>s+porCiudad.get(c).personal,0), totR = ciudades.reduce((s,c)=>s+porCiudad.get(c).retiros,0);
   renderTable('tblRotacionCiudad',
-    ['Ciudad / área','Tipo','Personal','Retiros','% Rotación'],
+    ['Ciudad / área','Ciudad','Personal','Retiros','% Rotación'],
     ciudades.map(c=>{ const e = porCiudad.get(c); const pct = e.personal ? e.retiros/e.personal*100 : 0;
-      return [c, e.area ? 'Área (sin ciudad)' : 'Ciudad', fmtNum(e.personal), fmtNum(e.retiros), fmtNum(pct,1)+'%']; })
+      // las áreas centralizadas (sin ciudad en la hoja) son de Medellín
+      return [c, e.area ? 'MEDELLIN' : c, fmtNum(e.personal), fmtNum(e.retiros), fmtNum(pct,1)+'%']; })
     .concat(ciudades.length ? [['TOTAL', '', fmtNum(totP), fmtNum(totR), fmtNum(totP ? totR/totP*100 : 0,1)+'%']] : [])
   );
 
