@@ -24773,6 +24773,7 @@
       "anio": 2023,
       "mes": "Julio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 257,
       "retiros": 18,
       "rotacionPct": 7.003891050583658
@@ -24781,6 +24782,7 @@
       "anio": 2023,
       "mes": "Julio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 74,
       "retiros": 10,
       "rotacionPct": 13.513513513513514
@@ -24789,14 +24791,25 @@
       "anio": 2023,
       "mes": "Julio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 1,
       "rotacionPct": 10.0
     },
     {
       "anio": 2023,
+      "mes": "Julio",
+      "ciudad": "MANTENIMIENTO",
+      "tipo": "area",
+      "personal": 7,
+      "retiros": 1,
+      "rotacionPct": 14.285714285714285
+    },
+    {
+      "anio": 2023,
       "mes": "Agosto",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 258,
       "retiros": 22,
       "rotacionPct": 8.527131782945736
@@ -24805,6 +24818,7 @@
       "anio": 2023,
       "mes": "Agosto",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 70,
       "retiros": 8,
       "rotacionPct": 11.428571428571429
@@ -24813,6 +24827,7 @@
       "anio": 2023,
       "mes": "Agosto",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -24821,6 +24836,7 @@
       "anio": 2023,
       "mes": "Septiembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 261,
       "retiros": 26,
       "rotacionPct": 9.961685823754788
@@ -24829,6 +24845,7 @@
       "anio": 2023,
       "mes": "Septiembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 78,
       "retiros": 11,
       "rotacionPct": 14.102564102564102
@@ -24837,6 +24854,7 @@
       "anio": 2023,
       "mes": "Septiembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -24845,6 +24863,7 @@
       "anio": 2023,
       "mes": "Octubre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 264,
       "retiros": 22,
       "rotacionPct": 8.333333333333332
@@ -24853,6 +24872,7 @@
       "anio": 2023,
       "mes": "Octubre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 77,
       "retiros": 14,
       "rotacionPct": 18.181818181818183
@@ -24861,6 +24881,7 @@
       "anio": 2023,
       "mes": "Octubre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -24869,6 +24890,7 @@
       "anio": 2023,
       "mes": "Noviembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 273,
       "retiros": 33,
       "rotacionPct": 12.087912087912088
@@ -24877,6 +24899,7 @@
       "anio": 2023,
       "mes": "Noviembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 73,
       "retiros": 11,
       "rotacionPct": 15.068493150684931
@@ -24885,6 +24908,7 @@
       "anio": 2023,
       "mes": "Noviembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -24893,6 +24917,7 @@
       "anio": 2023,
       "mes": "Diciembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 272,
       "retiros": 31,
       "rotacionPct": 11.397058823529411
@@ -24901,6 +24926,7 @@
       "anio": 2023,
       "mes": "Diciembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 76,
       "retiros": 7,
       "rotacionPct": 9.210526315789473
@@ -24909,6 +24935,7 @@
       "anio": 2023,
       "mes": "Diciembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -24917,6 +24944,7 @@
       "anio": 2024,
       "mes": "Enero",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 274,
       "retiros": 33,
       "rotacionPct": 12.043795620437956
@@ -24925,6 +24953,7 @@
       "anio": 2024,
       "mes": "Enero",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 76,
       "retiros": 11,
       "rotacionPct": 14.473684210526317
@@ -24933,6 +24962,7 @@
       "anio": 2024,
       "mes": "Enero",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 12,
       "retiros": 1,
       "rotacionPct": 8.333333333333332
@@ -24941,6 +24971,7 @@
       "anio": 2024,
       "mes": "Febrero",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 267,
       "retiros": 28,
       "rotacionPct": 10.486891385767791
@@ -24949,6 +24980,7 @@
       "anio": 2024,
       "mes": "Febrero",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 68,
       "retiros": 11,
       "rotacionPct": 16.176470588235293
@@ -24957,6 +24989,7 @@
       "anio": 2024,
       "mes": "Febrero",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -24965,6 +24998,7 @@
       "anio": 2024,
       "mes": "Marzo",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 260,
       "retiros": 23,
       "rotacionPct": 8.846153846153847
@@ -24973,6 +25007,7 @@
       "anio": 2024,
       "mes": "Marzo",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 60,
       "retiros": 4,
       "rotacionPct": 6.666666666666667
@@ -24981,6 +25016,7 @@
       "anio": 2024,
       "mes": "Marzo",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -24989,6 +25025,7 @@
       "anio": 2024,
       "mes": "Marzo",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -24997,6 +25034,7 @@
       "anio": 2024,
       "mes": "Marzo",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 45,
       "retiros": 7,
       "rotacionPct": 15.555555555555555
@@ -25005,6 +25043,7 @@
       "anio": 2024,
       "mes": "Marzo",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 2,
       "rotacionPct": 9.523809523809524
@@ -25013,6 +25052,7 @@
       "anio": 2024,
       "mes": "Abril",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 264,
       "retiros": 18,
       "rotacionPct": 6.8181818181818175
@@ -25021,6 +25061,7 @@
       "anio": 2024,
       "mes": "Abril",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 66,
       "retiros": 9,
       "rotacionPct": 13.636363636363635
@@ -25029,6 +25070,7 @@
       "anio": 2024,
       "mes": "Abril",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 13,
       "retiros": 1,
       "rotacionPct": 7.6923076923076925
@@ -25037,6 +25079,7 @@
       "anio": 2024,
       "mes": "Abril",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 1,
       "rotacionPct": 10.0
@@ -25045,6 +25088,7 @@
       "anio": 2024,
       "mes": "Abril",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 43,
       "retiros": 5,
       "rotacionPct": 11.627906976744185
@@ -25053,6 +25097,7 @@
       "anio": 2024,
       "mes": "Abril",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 2,
       "rotacionPct": 9.523809523809524
@@ -25061,6 +25106,7 @@
       "anio": 2024,
       "mes": "Mayo",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 260,
       "retiros": 24,
       "rotacionPct": 9.230769230769232
@@ -25069,6 +25115,7 @@
       "anio": 2024,
       "mes": "Mayo",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 57,
       "retiros": 2,
       "rotacionPct": 3.508771929824561
@@ -25077,6 +25124,7 @@
       "anio": 2024,
       "mes": "Mayo",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 12,
       "retiros": 2,
       "rotacionPct": 16.666666666666664
@@ -25085,6 +25133,7 @@
       "anio": 2024,
       "mes": "Mayo",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 1,
       "rotacionPct": 10.0
@@ -25093,6 +25142,7 @@
       "anio": 2024,
       "mes": "Mayo",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 42,
       "retiros": 4,
       "rotacionPct": 9.523809523809524
@@ -25101,6 +25151,7 @@
       "anio": 2024,
       "mes": "Mayo",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 3,
       "rotacionPct": 13.636363636363635
@@ -25109,6 +25160,7 @@
       "anio": 2024,
       "mes": "Junio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 257,
       "retiros": 33,
       "rotacionPct": 12.840466926070038
@@ -25117,6 +25169,7 @@
       "anio": 2024,
       "mes": "Junio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 58,
       "retiros": 6,
       "rotacionPct": 10.344827586206897
@@ -25125,6 +25178,7 @@
       "anio": 2024,
       "mes": "Junio",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25133,6 +25187,7 @@
       "anio": 2024,
       "mes": "Junio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -25141,6 +25196,7 @@
       "anio": 2024,
       "mes": "Junio",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 41,
       "retiros": 2,
       "rotacionPct": 4.878048780487805
@@ -25149,6 +25205,7 @@
       "anio": 2024,
       "mes": "Junio",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -25157,6 +25214,7 @@
       "anio": 2024,
       "mes": "Julio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 258,
       "retiros": 31,
       "rotacionPct": 12.015503875968992
@@ -25165,6 +25223,7 @@
       "anio": 2024,
       "mes": "Julio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 61,
       "retiros": 5,
       "rotacionPct": 8.19672131147541
@@ -25173,6 +25232,7 @@
       "anio": 2024,
       "mes": "Julio",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -25181,6 +25241,7 @@
       "anio": 2024,
       "mes": "Julio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25189,6 +25250,7 @@
       "anio": 2024,
       "mes": "Julio",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 45,
       "retiros": 9,
       "rotacionPct": 20.0
@@ -25197,6 +25259,7 @@
       "anio": 2024,
       "mes": "Julio",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 24,
       "retiros": 4,
       "rotacionPct": 16.666666666666664
@@ -25205,6 +25268,7 @@
       "anio": 2024,
       "mes": "Agosto",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 257,
       "retiros": 22,
       "rotacionPct": 8.560311284046692
@@ -25213,6 +25277,7 @@
       "anio": 2024,
       "mes": "Agosto",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 62,
       "retiros": 6,
       "rotacionPct": 9.67741935483871
@@ -25221,6 +25286,7 @@
       "anio": 2024,
       "mes": "Agosto",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25229,6 +25295,7 @@
       "anio": 2024,
       "mes": "Agosto",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 3,
       "rotacionPct": 27.27272727272727
@@ -25237,6 +25304,7 @@
       "anio": 2024,
       "mes": "Agosto",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 44,
       "retiros": 4,
       "rotacionPct": 9.090909090909092
@@ -25245,6 +25313,7 @@
       "anio": 2024,
       "mes": "Agosto",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 1,
       "rotacionPct": 4.761904761904762
@@ -25253,6 +25322,7 @@
       "anio": 2024,
       "mes": "Septiembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 260,
       "retiros": 29,
       "rotacionPct": 11.153846153846155
@@ -25261,6 +25331,7 @@
       "anio": 2024,
       "mes": "Septiembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 58,
       "retiros": 4,
       "rotacionPct": 6.896551724137931
@@ -25269,6 +25340,7 @@
       "anio": 2024,
       "mes": "Septiembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -25277,6 +25349,7 @@
       "anio": 2024,
       "mes": "Septiembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 3,
       "rotacionPct": 30.0
@@ -25285,6 +25358,7 @@
       "anio": 2024,
       "mes": "Septiembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 42,
       "retiros": 5,
       "rotacionPct": 11.904761904761903
@@ -25293,6 +25367,7 @@
       "anio": 2024,
       "mes": "Septiembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25301,6 +25376,7 @@
       "anio": 2024,
       "mes": "Octubre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 261,
       "retiros": 24,
       "rotacionPct": 9.195402298850574
@@ -25309,6 +25385,7 @@
       "anio": 2024,
       "mes": "Octubre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 64,
       "retiros": 6,
       "rotacionPct": 9.375
@@ -25317,6 +25394,7 @@
       "anio": 2024,
       "mes": "Octubre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -25325,6 +25403,7 @@
       "anio": 2024,
       "mes": "Octubre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 9,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25333,6 +25412,7 @@
       "anio": 2024,
       "mes": "Octubre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 48,
       "retiros": 9,
       "rotacionPct": 18.75
@@ -25341,6 +25421,7 @@
       "anio": 2024,
       "mes": "Octubre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -25349,6 +25430,7 @@
       "anio": 2024,
       "mes": "Noviembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 275,
       "retiros": 20,
       "rotacionPct": 7.2727272727272725
@@ -25357,6 +25439,7 @@
       "anio": 2024,
       "mes": "Noviembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 63,
       "retiros": 9,
       "rotacionPct": 14.285714285714285
@@ -25365,6 +25448,7 @@
       "anio": 2024,
       "mes": "Noviembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 3,
       "rotacionPct": 27.27272727272727
@@ -25373,6 +25457,7 @@
       "anio": 2024,
       "mes": "Noviembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 15,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25381,6 +25466,7 @@
       "anio": 2024,
       "mes": "Noviembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 45,
       "retiros": 2,
       "rotacionPct": 4.444444444444445
@@ -25389,6 +25475,7 @@
       "anio": 2024,
       "mes": "Noviembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25397,6 +25484,7 @@
       "anio": 2024,
       "mes": "Diciembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 275,
       "retiros": 36,
       "rotacionPct": 13.090909090909092
@@ -25405,6 +25493,7 @@
       "anio": 2024,
       "mes": "Diciembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 58,
       "retiros": 5,
       "rotacionPct": 8.620689655172415
@@ -25413,6 +25502,7 @@
       "anio": 2024,
       "mes": "Diciembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 2,
       "rotacionPct": 20.0
@@ -25421,6 +25511,7 @@
       "anio": 2024,
       "mes": "Diciembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -25429,6 +25520,7 @@
       "anio": 2024,
       "mes": "Diciembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 46,
       "retiros": 3,
       "rotacionPct": 6.521739130434782
@@ -25437,6 +25529,7 @@
       "anio": 2024,
       "mes": "Diciembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 3,
       "rotacionPct": 13.636363636363635
@@ -25445,6 +25538,7 @@
       "anio": 2025,
       "mes": "Enero",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 270,
       "retiros": 40,
       "rotacionPct": 14.814814814814813
@@ -25453,6 +25547,7 @@
       "anio": 2025,
       "mes": "Enero",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 60,
       "retiros": 9,
       "rotacionPct": 15.0
@@ -25461,6 +25556,7 @@
       "anio": 2025,
       "mes": "Enero",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 12,
       "retiros": 3,
       "rotacionPct": 25.0
@@ -25469,6 +25565,7 @@
       "anio": 2025,
       "mes": "Enero",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25477,6 +25574,7 @@
       "anio": 2025,
       "mes": "Enero",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 47,
       "retiros": 5,
       "rotacionPct": 10.638297872340425
@@ -25485,6 +25583,7 @@
       "anio": 2025,
       "mes": "Enero",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 1,
       "rotacionPct": 4.761904761904762
@@ -25493,6 +25592,7 @@
       "anio": 2025,
       "mes": "Febrero",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 257,
       "retiros": 27,
       "rotacionPct": 10.505836575875486
@@ -25501,6 +25601,7 @@
       "anio": 2025,
       "mes": "Febrero",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 62,
       "retiros": 9,
       "rotacionPct": 14.516129032258066
@@ -25509,6 +25610,7 @@
       "anio": 2025,
       "mes": "Febrero",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 9,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25517,6 +25619,7 @@
       "anio": 2025,
       "mes": "Febrero",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25525,6 +25628,7 @@
       "anio": 2025,
       "mes": "Febrero",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 44,
       "retiros": 3,
       "rotacionPct": 6.8181818181818175
@@ -25533,6 +25637,7 @@
       "anio": 2025,
       "mes": "Febrero",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 3,
       "rotacionPct": 13.636363636363635
@@ -25541,6 +25646,7 @@
       "anio": 2025,
       "mes": "Marzo",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 259,
       "retiros": 32,
       "rotacionPct": 12.355212355212355
@@ -25549,6 +25655,7 @@
       "anio": 2025,
       "mes": "Marzo",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 63,
       "retiros": 10,
       "rotacionPct": 15.873015873015872
@@ -25557,6 +25664,7 @@
       "anio": 2025,
       "mes": "Marzo",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25565,6 +25673,7 @@
       "anio": 2025,
       "mes": "Marzo",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25573,6 +25682,7 @@
       "anio": 2025,
       "mes": "Marzo",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 48,
       "retiros": 10,
       "rotacionPct": 20.833333333333336
@@ -25581,6 +25691,7 @@
       "anio": 2025,
       "mes": "Marzo",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 23,
       "retiros": 3,
       "rotacionPct": 13.043478260869565
@@ -25589,6 +25700,7 @@
       "anio": 2025,
       "mes": "Abril",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 269,
       "retiros": 32,
       "rotacionPct": 11.895910780669144
@@ -25597,6 +25709,7 @@
       "anio": 2025,
       "mes": "Abril",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 69,
       "retiros": 9,
       "rotacionPct": 13.043478260869565
@@ -25605,6 +25718,7 @@
       "anio": 2025,
       "mes": "Abril",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25613,6 +25727,7 @@
       "anio": 2025,
       "mes": "Abril",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -25621,6 +25736,7 @@
       "anio": 2025,
       "mes": "Abril",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 41,
       "retiros": 3,
       "rotacionPct": 7.317073170731707
@@ -25629,6 +25745,7 @@
       "anio": 2025,
       "mes": "Abril",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 3,
       "rotacionPct": 13.636363636363635
@@ -25637,6 +25754,7 @@
       "anio": 2025,
       "mes": "Mayo",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 262,
       "retiros": 21,
       "rotacionPct": 8.015267175572518
@@ -25645,6 +25763,7 @@
       "anio": 2025,
       "mes": "Mayo",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 70,
       "retiros": 7,
       "rotacionPct": 10.0
@@ -25653,6 +25772,7 @@
       "anio": 2025,
       "mes": "Mayo",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25661,6 +25781,7 @@
       "anio": 2025,
       "mes": "Mayo",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 1,
       "rotacionPct": 5.263157894736842
@@ -25669,6 +25790,7 @@
       "anio": 2025,
       "mes": "Mayo",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 42,
       "retiros": 2,
       "rotacionPct": 4.761904761904762
@@ -25677,6 +25799,7 @@
       "anio": 2025,
       "mes": "Mayo",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 23,
       "retiros": 6,
       "rotacionPct": 26.08695652173913
@@ -25685,6 +25808,7 @@
       "anio": 2025,
       "mes": "Junio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 261,
       "retiros": 33,
       "rotacionPct": 12.643678160919542
@@ -25693,6 +25817,7 @@
       "anio": 2025,
       "mes": "Junio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 67,
       "retiros": 4,
       "rotacionPct": 5.970149253731343
@@ -25701,6 +25826,7 @@
       "anio": 2025,
       "mes": "Junio",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25709,6 +25835,7 @@
       "anio": 2025,
       "mes": "Junio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25717,6 +25844,7 @@
       "anio": 2025,
       "mes": "Junio",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 44,
       "retiros": 6,
       "rotacionPct": 13.636363636363635
@@ -25725,6 +25853,7 @@
       "anio": 2025,
       "mes": "Junio",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 2,
       "rotacionPct": 9.090909090909092
@@ -25733,6 +25862,7 @@
       "anio": 2025,
       "mes": "Julio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 282,
       "retiros": 28,
       "rotacionPct": 9.929078014184398
@@ -25741,6 +25871,7 @@
       "anio": 2025,
       "mes": "Julio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 79,
       "retiros": 11,
       "rotacionPct": 13.924050632911392
@@ -25749,6 +25880,7 @@
       "anio": 2025,
       "mes": "Julio",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25757,6 +25889,7 @@
       "anio": 2025,
       "mes": "Julio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25765,6 +25898,7 @@
       "anio": 2025,
       "mes": "Julio",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 46,
       "retiros": 2,
       "rotacionPct": 4.3478260869565215
@@ -25773,6 +25907,7 @@
       "anio": 2025,
       "mes": "Julio",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 24,
       "retiros": 3,
       "rotacionPct": 12.5
@@ -25781,6 +25916,7 @@
       "anio": 2025,
       "mes": "Agosto",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 283,
       "retiros": 35,
       "rotacionPct": 12.36749116607774
@@ -25789,6 +25925,7 @@
       "anio": 2025,
       "mes": "Agosto",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 75,
       "retiros": 12,
       "rotacionPct": 16.0
@@ -25797,6 +25934,7 @@
       "anio": 2025,
       "mes": "Agosto",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25805,6 +25943,7 @@
       "anio": 2025,
       "mes": "Agosto",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 1,
       "rotacionPct": 5.263157894736842
@@ -25813,6 +25952,7 @@
       "anio": 2025,
       "mes": "Agosto",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 58,
       "retiros": 7,
       "rotacionPct": 12.068965517241379
@@ -25821,6 +25961,7 @@
       "anio": 2025,
       "mes": "Agosto",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 24,
       "retiros": 1,
       "rotacionPct": 4.166666666666666
@@ -25829,6 +25970,7 @@
       "anio": 2025,
       "mes": "Septiembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 281,
       "retiros": 41,
       "rotacionPct": 14.590747330960854
@@ -25837,6 +25979,7 @@
       "anio": 2025,
       "mes": "Septiembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 75,
       "retiros": 4,
       "rotacionPct": 5.333333333333334
@@ -25845,6 +25988,7 @@
       "anio": 2025,
       "mes": "Septiembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25853,6 +25997,7 @@
       "anio": 2025,
       "mes": "Septiembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 4,
       "rotacionPct": 19.047619047619047
@@ -25861,6 +26006,7 @@
       "anio": 2025,
       "mes": "Septiembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 54,
       "retiros": 4,
       "rotacionPct": 7.4074074074074066
@@ -25869,14 +26015,34 @@
       "anio": 2025,
       "mes": "Septiembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 24,
       "retiros": 3,
       "rotacionPct": 12.5
     },
     {
       "anio": 2025,
+      "mes": "Septiembre",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 31,
+      "retiros": 1,
+      "rotacionPct": 3.225806451612903
+    },
+    {
+      "anio": 2025,
+      "mes": "Septiembre",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 14,
+      "retiros": 2,
+      "rotacionPct": 14.285714285714285
+    },
+    {
+      "anio": 2025,
       "mes": "Octubre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 281,
       "retiros": 47,
       "rotacionPct": 16.72597864768683
@@ -25885,6 +26051,7 @@
       "anio": 2025,
       "mes": "Octubre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 91,
       "retiros": 15,
       "rotacionPct": 16.483516483516482
@@ -25893,6 +26060,7 @@
       "anio": 2025,
       "mes": "Octubre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25901,6 +26069,7 @@
       "anio": 2025,
       "mes": "Octubre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 1,
       "rotacionPct": 5.555555555555555
@@ -25909,6 +26078,7 @@
       "anio": 2025,
       "mes": "Octubre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 57,
       "retiros": 5,
       "rotacionPct": 8.771929824561402
@@ -25917,14 +26087,34 @@
       "anio": 2025,
       "mes": "Octubre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 1,
       "rotacionPct": 4.545454545454546
     },
     {
       "anio": 2025,
+      "mes": "Octubre",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 34,
+      "retiros": 1,
+      "rotacionPct": 2.941176470588235
+    },
+    {
+      "anio": 2025,
+      "mes": "Octubre",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 15,
+      "retiros": 1,
+      "rotacionPct": 6.666666666666667
+    },
+    {
+      "anio": 2025,
       "mes": "Noviembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 288,
       "retiros": 43,
       "rotacionPct": 14.930555555555555
@@ -25933,6 +26123,7 @@
       "anio": 2025,
       "mes": "Noviembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 98,
       "retiros": 10,
       "rotacionPct": 10.204081632653061
@@ -25941,6 +26132,7 @@
       "anio": 2025,
       "mes": "Noviembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25949,6 +26141,7 @@
       "anio": 2025,
       "mes": "Noviembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 1,
       "rotacionPct": 5.263157894736842
@@ -25957,6 +26150,7 @@
       "anio": 2025,
       "mes": "Noviembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 60,
       "retiros": 5,
       "rotacionPct": 8.333333333333332
@@ -25965,14 +26159,34 @@
       "anio": 2025,
       "mes": "Noviembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 23,
       "retiros": 3,
       "rotacionPct": 13.043478260869565
     },
     {
       "anio": 2025,
+      "mes": "Noviembre",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 36,
+      "retiros": 4,
+      "rotacionPct": 11.11111111111111
+    },
+    {
+      "anio": 2025,
+      "mes": "Noviembre",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 18,
+      "retiros": 1,
+      "rotacionPct": 5.555555555555555
+    },
+    {
+      "anio": 2025,
       "mes": "Diciembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 269,
       "retiros": 50,
       "rotacionPct": 18.587360594795538
@@ -25981,6 +26195,7 @@
       "anio": 2025,
       "mes": "Diciembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 96,
       "retiros": 14,
       "rotacionPct": 14.583333333333334
@@ -25989,6 +26204,7 @@
       "anio": 2025,
       "mes": "Diciembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -25997,6 +26213,7 @@
       "anio": 2025,
       "mes": "Diciembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -26005,6 +26222,7 @@
       "anio": 2025,
       "mes": "Diciembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 57,
       "retiros": 9,
       "rotacionPct": 15.789473684210526
@@ -26013,14 +26231,34 @@
       "anio": 2025,
       "mes": "Diciembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 25,
       "retiros": 3,
       "rotacionPct": 12.0
     },
     {
+      "anio": 2025,
+      "mes": "Diciembre",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 33,
+      "retiros": 4,
+      "rotacionPct": 12.121212121212121
+    },
+    {
+      "anio": 2025,
+      "mes": "Diciembre",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 17,
+      "retiros": 1,
+      "rotacionPct": 5.88235294117647
+    },
+    {
       "anio": 2026,
       "mes": "Enero",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 261,
       "retiros": 34,
       "rotacionPct": 13.026819923371647
@@ -26029,6 +26267,7 @@
       "anio": 2026,
       "mes": "Enero",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 98,
       "retiros": 15,
       "rotacionPct": 15.306122448979592
@@ -26037,6 +26276,7 @@
       "anio": 2026,
       "mes": "Enero",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -26045,6 +26285,7 @@
       "anio": 2026,
       "mes": "Enero",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -26053,6 +26294,7 @@
       "anio": 2026,
       "mes": "Enero",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 47,
       "retiros": 3,
       "rotacionPct": 6.382978723404255
@@ -26061,14 +26303,34 @@
       "anio": 2026,
       "mes": "Enero",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 24,
       "retiros": 5,
       "rotacionPct": 20.833333333333336
     },
     {
       "anio": 2026,
+      "mes": "Enero",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 35,
+      "retiros": 3,
+      "rotacionPct": 8.571428571428571
+    },
+    {
+      "anio": 2026,
+      "mes": "Enero",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 14,
+      "retiros": 1,
+      "rotacionPct": 7.142857142857142
+    },
+    {
+      "anio": 2026,
       "mes": "Febrero",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 260,
       "retiros": 38,
       "rotacionPct": 14.615384615384617
@@ -26077,6 +26339,7 @@
       "anio": 2026,
       "mes": "Febrero",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 98,
       "retiros": 14,
       "rotacionPct": 14.285714285714285
@@ -26085,6 +26348,7 @@
       "anio": 2026,
       "mes": "Febrero",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -26093,6 +26357,7 @@
       "anio": 2026,
       "mes": "Febrero",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 1,
       "rotacionPct": 5.263157894736842
@@ -26101,6 +26366,7 @@
       "anio": 2026,
       "mes": "Febrero",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 54,
       "retiros": 3,
       "rotacionPct": 5.555555555555555
@@ -26109,14 +26375,34 @@
       "anio": 2026,
       "mes": "Febrero",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 3,
       "rotacionPct": 13.636363636363635
     },
     {
       "anio": 2026,
+      "mes": "Febrero",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 32,
+      "retiros": 2,
+      "rotacionPct": 6.25
+    },
+    {
+      "anio": 2026,
+      "mes": "Febrero",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 16,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
       "mes": "Marzo",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 260,
       "retiros": 46,
       "rotacionPct": 17.692307692307693
@@ -26125,6 +26411,7 @@
       "anio": 2026,
       "mes": "Marzo",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 97,
       "retiros": 20,
       "rotacionPct": 20.618556701030926
@@ -26133,6 +26420,7 @@
       "anio": 2026,
       "mes": "Marzo",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 10,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -26141,6 +26429,7 @@
       "anio": 2026,
       "mes": "Marzo",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -26149,6 +26438,7 @@
       "anio": 2026,
       "mes": "Marzo",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 50,
       "retiros": 5,
       "rotacionPct": 10.0
@@ -26157,14 +26447,34 @@
       "anio": 2026,
       "mes": "Marzo",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 1,
       "rotacionPct": 4.761904761904762
     },
     {
       "anio": 2026,
+      "mes": "Marzo",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 28,
+      "retiros": 4,
+      "rotacionPct": 14.285714285714285
+    },
+    {
+      "anio": 2026,
+      "mes": "Marzo",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 16,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
       "mes": "Abril",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 259,
       "retiros": 33,
       "rotacionPct": 12.741312741312742
@@ -26173,6 +26483,7 @@
       "anio": 2026,
       "mes": "Abril",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 113,
       "retiros": 21,
       "rotacionPct": 18.58407079646018
@@ -26181,6 +26492,7 @@
       "anio": 2026,
       "mes": "Abril",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 11,
       "retiros": 1,
       "rotacionPct": 9.090909090909092
@@ -26189,6 +26501,7 @@
       "anio": 2026,
       "mes": "Abril",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 1,
       "rotacionPct": 5.555555555555555
@@ -26197,6 +26510,7 @@
       "anio": 2026,
       "mes": "Abril",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 52,
       "retiros": 1,
       "rotacionPct": 1.9230769230769231
@@ -26205,14 +26519,34 @@
       "anio": 2026,
       "mes": "Abril",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 23,
       "retiros": 3,
       "rotacionPct": 13.043478260869565
     },
     {
       "anio": 2026,
+      "mes": "Abril",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 34,
+      "retiros": 2,
+      "rotacionPct": 5.88235294117647
+    },
+    {
+      "anio": 2026,
+      "mes": "Abril",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 16,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
       "mes": "Mayo",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 251,
       "retiros": 39,
       "rotacionPct": 15.53784860557769
@@ -26221,6 +26555,7 @@
       "anio": 2026,
       "mes": "Mayo",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 107,
       "retiros": 23,
       "rotacionPct": 21.49532710280374
@@ -26229,6 +26564,7 @@
       "anio": 2026,
       "mes": "Mayo",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 14,
       "retiros": 0,
       "rotacionPct": 0.0
@@ -26237,6 +26573,7 @@
       "anio": 2026,
       "mes": "Mayo",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 18,
       "retiros": 1,
       "rotacionPct": 5.555555555555555
@@ -26245,6 +26582,7 @@
       "anio": 2026,
       "mes": "Mayo",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 49,
       "retiros": 3,
       "rotacionPct": 6.122448979591836
@@ -26253,14 +26591,34 @@
       "anio": 2026,
       "mes": "Mayo",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 1,
       "rotacionPct": 4.761904761904762
     },
     {
       "anio": 2026,
+      "mes": "Mayo",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 33,
+      "retiros": 1,
+      "rotacionPct": 3.0303030303030303
+    },
+    {
+      "anio": 2026,
+      "mes": "Mayo",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 16,
+      "retiros": 1,
+      "rotacionPct": 6.25
+    },
+    {
+      "anio": 2026,
       "mes": "Junio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 256,
       "retiros": 35,
       "rotacionPct": 13.671875
@@ -26269,6 +26627,7 @@
       "anio": 2026,
       "mes": "Junio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 105,
       "retiros": 16,
       "rotacionPct": 15.238095238095239
@@ -26277,6 +26636,7 @@
       "anio": 2026,
       "mes": "Junio",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 3,
       "rotacionPct": 15.789473684210526
@@ -26285,6 +26645,7 @@
       "anio": 2026,
       "mes": "Junio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 1,
       "rotacionPct": 5.0
@@ -26293,6 +26654,7 @@
       "anio": 2026,
       "mes": "Junio",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 58,
       "retiros": 4,
       "rotacionPct": 6.896551724137931
@@ -26301,14 +26663,34 @@
       "anio": 2026,
       "mes": "Junio",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 23,
       "retiros": 3,
       "rotacionPct": 13.043478260869565
     },
     {
       "anio": 2026,
+      "mes": "Junio",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 33,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
+      "mes": "Junio",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 16,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
       "mes": "Julio",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 255,
       "retiros": 35,
       "rotacionPct": 13.725490196078432
@@ -26317,6 +26699,7 @@
       "anio": 2026,
       "mes": "Julio",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 105,
       "retiros": 16,
       "rotacionPct": 15.238095238095239
@@ -26325,6 +26708,7 @@
       "anio": 2026,
       "mes": "Julio",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 4,
       "rotacionPct": 21.052631578947366
@@ -26333,6 +26717,7 @@
       "anio": 2026,
       "mes": "Julio",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 21,
       "retiros": 3,
       "rotacionPct": 14.285714285714285
@@ -26341,6 +26726,7 @@
       "anio": 2026,
       "mes": "Julio",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 56,
       "retiros": 3,
       "rotacionPct": 5.357142857142857
@@ -26349,14 +26735,34 @@
       "anio": 2026,
       "mes": "Julio",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 1,
       "rotacionPct": 4.545454545454546
     },
     {
       "anio": 2026,
+      "mes": "Julio",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 33,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
+      "mes": "Julio",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 16,
+      "retiros": 1,
+      "rotacionPct": 6.25
+    },
+    {
+      "anio": 2026,
       "mes": "Agosto",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 255,
       "retiros": 30,
       "rotacionPct": 11.76470588235294
@@ -26365,6 +26771,7 @@
       "anio": 2026,
       "mes": "Agosto",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 100,
       "retiros": 8,
       "rotacionPct": 8.0
@@ -26373,6 +26780,7 @@
       "anio": 2026,
       "mes": "Agosto",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 17,
       "retiros": 1,
       "rotacionPct": 5.88235294117647
@@ -26381,6 +26789,7 @@
       "anio": 2026,
       "mes": "Agosto",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 20,
       "retiros": 2,
       "rotacionPct": 10.0
@@ -26389,6 +26798,7 @@
       "anio": 2026,
       "mes": "Agosto",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 54,
       "retiros": 2,
       "rotacionPct": 3.7037037037037033
@@ -26397,14 +26807,61 @@
       "anio": 2026,
       "mes": "Agosto",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 1,
       "rotacionPct": 4.545454545454546
     },
     {
       "anio": 2026,
+      "mes": "Agosto",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 35,
+      "retiros": 4,
+      "rotacionPct": 11.428571428571429
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 15,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "ciudad": "MANTENIMIENTO",
+      "tipo": "area",
+      "personal": 11,
+      "retiros": 1,
+      "rotacionPct": 9.090909090909092
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "ciudad": "ADMINISTRATIVOS",
+      "tipo": "area",
+      "personal": 63,
+      "retiros": 8,
+      "rotacionPct": 12.698412698412698
+    },
+    {
+      "anio": 2026,
+      "mes": "Agosto",
+      "ciudad": "SERVICIOS GENERALES",
+      "tipo": "area",
+      "personal": 2,
+      "retiros": 0,
+      "rotacionPct": 0.0
+    },
+    {
+      "anio": 2026,
       "mes": "Septiembre",
       "ciudad": "MEDELLIN",
+      "tipo": "ciudad",
       "personal": 245,
       "retiros": 28,
       "rotacionPct": 11.428571428571429
@@ -26413,6 +26870,7 @@
       "anio": 2026,
       "mes": "Septiembre",
       "ciudad": "BOGOTA",
+      "tipo": "ciudad",
       "personal": 94,
       "retiros": 12,
       "rotacionPct": 12.76595744680851
@@ -26421,6 +26879,7 @@
       "anio": 2026,
       "mes": "Septiembre",
       "ciudad": "PEREIRA",
+      "tipo": "ciudad",
       "personal": 16,
       "retiros": 2,
       "rotacionPct": 12.5
@@ -26429,6 +26888,7 @@
       "anio": 2026,
       "mes": "Septiembre",
       "ciudad": "BARRANQUILLA",
+      "tipo": "ciudad",
       "personal": 19,
       "retiros": 1,
       "rotacionPct": 5.263157894736842
@@ -26437,6 +26897,7 @@
       "anio": 2026,
       "mes": "Septiembre",
       "ciudad": "CALI",
+      "tipo": "ciudad",
       "personal": 53,
       "retiros": 5,
       "rotacionPct": 9.433962264150944
@@ -26445,9 +26906,55 @@
       "anio": 2026,
       "mes": "Septiembre",
       "ciudad": "MANIZALES",
+      "tipo": "ciudad",
       "personal": 22,
       "retiros": 2,
       "rotacionPct": 9.090909090909092
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "ciudad": "PRODUCCIÓN",
+      "tipo": "area",
+      "personal": 35,
+      "retiros": 2,
+      "rotacionPct": 5.714285714285714
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "ciudad": "LOGÍSTICA",
+      "tipo": "area",
+      "personal": 17,
+      "retiros": 1,
+      "rotacionPct": 5.88235294117647
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "ciudad": "MANTENIMIENTO",
+      "tipo": "area",
+      "personal": 10,
+      "retiros": 1,
+      "rotacionPct": 10.0
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "ciudad": "ADMINISTRATIVOS",
+      "tipo": "area",
+      "personal": 63,
+      "retiros": 4,
+      "rotacionPct": 6.349206349206349
+    },
+    {
+      "anio": 2026,
+      "mes": "Septiembre",
+      "ciudad": "SERVICIOS GENERALES",
+      "tipo": "area",
+      "personal": 2,
+      "retiros": 0,
+      "rotacionPct": 0.0
     }
   ],
   "capacitacionesDetalle": [

@@ -620,14 +620,17 @@ def parse_rotacion_sheet_name(name, carry_year):
 
 
 CIUDADES_ROT = ["MEDELLIN", "BOGOTA", "PEREIRA", "BARRANQUILLA", "CALI", "MANIZALES"]
+# Áreas centralizadas (bloque de abajo de la hoja, sin ciudad): (clave en el encabezado, nombre)
+AREAS_ROT = [("PRODUCCI", "PRODUCCIÓN"), ("LOGISTIC", "LOGÍSTICA"), ("MANTENIMIENTO", "MANTENIMIENTO"),
+             ("ADMINISTRATIV", "ADMINISTRATIVOS"), ("SERVICIOS GENERALES", "SERVICIOS GENERALES")]
 
 
 def extract_rotacion_ciudad(ws):
     """Recorre los bloques rol×ciudad (7 columnas repetidas: SERVICIO/CAJEROS/AUXILIAR
     DE COCINA/LIDERES/LIDER JUNIOR, cada uno con sub-bloques por ciudad) y agrega
     personal/retiros por ciudad. Los roles centralizados (producción, logística,
-    mantenimiento, administrativos, servicios generales) no traen ciudad en la hoja
-    fuente, así que quedan fuera de este desglose (es un desglose parcial, no total)."""
+    mantenimiento, administrativos, servicios generales) no traen ciudad: se agregan como
+    "áreas" (clave "AREA:<nombre>") para que el total cuadre con los retiros del mes."""
     max_c, max_r = ws.max_column, ws.max_row
     header_cols = [1, 4, 7, 10, 13, 16, 19]
     agg = {}
@@ -643,7 +646,10 @@ def extract_rotacion_ciudad(ws):
                 continue  # no es un encabezado de bloque, es una fila de datos
             ciudad = next((ct for ct in CIUDADES_ROT if ct in nv), None)
             if not ciudad:
-                continue
+                area = next((nombre for clave, nombre in AREAS_ROT if clave in nv), None)
+                if not area:
+                    continue
+                ciudad = "AREA:" + area
             vinc = temp = ret = None
             for rr in range(r + 1, min(r + 7, max_r + 1)):
                 lbl = ws.cell(row=rr, column=c).value
@@ -704,8 +710,9 @@ for sn in wb_rot.sheetnames:
     ciudad_agg = extract_rotacion_ciudad(wb_rot[sn])
     for ciudad, e in ciudad_agg.items():
         pct = (e["retiros"] / e["personal"] * 100) if e["personal"] else 0
+        es_area = ciudad.startswith("AREA:")
         out["rotacionCiudad"].append({
-            "anio": year, "mes": mes, "ciudad": ciudad,
+            "anio": year, "mes": mes, "ciudad": ciudad[5:] if es_area else ciudad, "tipo": "area" if es_area else "ciudad",
             "personal": e["personal"], "retiros": e["retiros"], "rotacionPct": pct,
         })
 out["rotacion"].sort(key=lambda x: period_key(x["anio"], x["mes"]))
