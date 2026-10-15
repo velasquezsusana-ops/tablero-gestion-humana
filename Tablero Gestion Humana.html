@@ -410,12 +410,12 @@
         </div>
       </div>
       <div class="section-title">Resultados de inducciones (nuevos ingresos)</div>
-      <div class="legend-row"><span class="item">Cobertura = personas inducidas ÷ nuevos ingresos del mes (contratados en INGRESOS.xlsx con fecha de ingreso en ese mes, todos los grupos: ciudades, no críticos, temporada y aprendices). Solo se calcula en los meses que traen el # de asistentes.</span></div>
+      <div class="legend-row"><span class="item">Todo el que ingresa recibe inducción. Personas inducidas = suma de "NUMERO DE ASISTENTES" de las sesiones de inducción del Excel CAPACITACIONES.</span></div>
       <div class="kpi-grid" id="induccionKpiGrid"></div>
       <div class="panel-grid">
         <div class="panel">
-          <h3>Personas inducidas vs. nuevos ingresos</h3>
-          <div class="panel-sub">Barras: personas · Línea: % de cobertura</div>
+          <h3>Inducciones por mes</h3>
+          <div class="panel-sub">Barras: personas inducidas · Línea: sesiones</div>
           <div class="chart-wrap"><canvas id="chartInduccionCobertura"></canvas></div>
         </div>
         <div class="panel">
@@ -2098,57 +2098,40 @@ function formacionDesglose(r){
            asisCap: suma(cap), asisInd: suma(ind), hayDetalle: true };
 }
 
-// Nuevos ingresos (contratados) con fecha de ingreso en ese año/mes, todos los grupos.
-function nuevosIngresosMes(anio, mes){
-  const mi = mesIdx(String(mes||'').trim());
-  return DATA.ingresos.filter(r=>r.contratado && r.fechaIngreso && r.fechaIngreso.getFullYear()===Number(anio) && r.fechaIngreso.getMonth()===mi).length;
-}
 function drawInducciones(rows, capRows){
   const ind = capRows.filter(c=>c.tipo==='Inducción').sort((a,b)=>(a.fecha||0)-(b.fecha||0));
   const meses = rows.map(r=>{
     const det = ind.filter(c=>String(c.anio)===String(r.anio) && String(c.mes||'').trim().toUpperCase()===String(r.mes||'').trim().toUpperCase());
     const conDato = det.some(c=>c.asistentes!=null);
-    const personas = conDato ? det.reduce((s,c)=>s+(c.asistentes||0),0) : null;
-    const ingresos = nuevosIngresosMes(r.anio, r.mes);
-    return { lbl:`${r.mes.slice(0,3)} ${r.anio}`, sesiones: det.length, personas, ingresos, cobertura: (personas!=null && ingresos) ? personas/ingresos : null };
+    return { lbl:`${r.mes.slice(0,3)} ${r.anio}`, sesiones: det.length, personas: conDato ? det.reduce((s,c)=>s+(c.asistentes||0),0) : null };
   });
   const sesiones = ind.length;
   const conDato = meses.filter(m=>m.personas!=null);
   const personas = conDato.reduce((s,m)=>s+m.personas,0);
-  const ingresosCD = conDato.reduce((s,m)=>s+m.ingresos,0);
-  const sesionesCD = ind.filter(c=>c.asistentes!=null).length;
-  const cobertura = ingresosCD ? personas/ingresosCD : NaN;
+  const conAsis = ind.filter(c=>c.asistentes!=null);
+  const mayor = conAsis.reduce((m,c)=>(!m || c.asistentes>m.asistentes) ? c : m, null);
 
   const grid = document.getElementById('induccionKpiGrid');
   grid.innerHTML = '';
   grid.appendChild(kpiCard('Sesiones de inducción', fmtNum(sesiones), null, 'neutral'));
   grid.appendChild(kpiCard('Personas inducidas', conDato.length ? fmtNum(personas) : '—', meses.some(m=>m.sesiones && m.personas==null) ? 'Algún mes sin # de asistentes' : null, 'neutral'));
-  grid.appendChild(kpiCard('Promedio de personas por sesión', sesionesCD ? fmtNum(personas/sesionesCD,1) : '—', null, 'neutral'));
-  grid.appendChild(kpiCard('Nuevos ingresos (meses con dato)', conDato.length ? fmtNum(ingresosCD) : '—', null, 'neutral'));
-  if (isFinite(cobertura)){
-    const ok = cobertura >= 0.95;
-    grid.appendChild(kpiCard('Cobertura de inducción', fmtPct(cobertura), ok ? 'Casi todos los ingresos inducidos' : `${fmtNum(Math.max(0, ingresosCD-personas))} ingresos sin inducción`, ok?'good':'critical'));
-  }
+  grid.appendChild(kpiCard('Promedio de personas por sesión', conAsis.length ? fmtNum(personas/conAsis.length,1) : '—', null, 'neutral'));
+  if (mayor) grid.appendChild(kpiCard('Sesión más grande', fmtNum(mayor.asistentes)+' personas', fmtDate(mayor.fecha), 'neutral'));
 
   makeComboChart('chartInduccionCobertura', meses.map(m=>m.lbl), {
-    bars: [
-      { label:'Nuevos ingresos', data: meses.map(m=>m.ingresos), backgroundColor: css('--series-2'), maxBarThickness:26 },
-      { label:'Personas inducidas', data: meses.map(m=>m.personas), backgroundColor: css('--series-3'), maxBarThickness:26 }
-    ],
-    lines: [ { label:'Cobertura', data: meses.map(m=>m.cobertura), borderColor: css('--series-1'), backgroundColor: css('--series-1'), yAxisID:'y1' } ],
-    yFmt: (v)=>fmtNum(v), y1Fmt: fmtPct
+    bars: [ { label:'Personas inducidas', data: meses.map(m=>m.personas), backgroundColor: css('--series-3'), maxBarThickness:30 } ],
+    lines: [ { label:'Sesiones', data: meses.map(m=>m.sesiones), borderColor: css('--series-1'), backgroundColor: css('--series-1'), yAxisID:'y1' } ],
+    yFmt: (v)=>fmtNum(v), y1Fmt: (v)=>fmtNum(v)
   });
 
-  const conAsis = ind.filter(c=>c.asistentes!=null);
   makeBarChart('chartInduccionSesiones', conAsis.map(c=>c.fecha ? `${String(c.fecha.getDate()).padStart(2,'0')} ${MESES[c.fecha.getMonth()].slice(0,3).toLowerCase()}` : '—'), [
     { label:'Personas', data: conAsis.map(c=>c.asistentes), backgroundColor: css('--series-3'), borderRadius:3, maxBarThickness:22 }
-  ], {integer:false});
+  ]);
 
   renderTable('tblInducciones',
-    ['Mes','Sesiones','Personas inducidas','Nuevos ingresos','Cobertura','Promedio por sesión'],
-    meses.map(m=>[m.lbl, fmtNum(m.sesiones), m.personas==null?'—':fmtNum(m.personas), fmtNum(m.ingresos), m.cobertura==null?'—':fmtPct(m.cobertura),
-      (m.personas!=null && m.sesiones) ? fmtNum(m.personas/m.sesiones,1) : '—'])
-    .concat(meses.length ? [['TOTAL', fmtNum(sesiones), conDato.length?fmtNum(personas):'—', fmtNum(meses.reduce((s,m)=>s+m.ingresos,0)), isFinite(cobertura)?fmtPct(cobertura):'—', sesionesCD?fmtNum(personas/sesionesCD,1):'—']] : [])
+    ['Mes','Sesiones','Personas inducidas','Promedio por sesión'],
+    meses.map(m=>[m.lbl, fmtNum(m.sesiones), m.personas==null?'—':fmtNum(m.personas), (m.personas!=null && m.sesiones) ? fmtNum(m.personas/m.sesiones,1) : '—'])
+    .concat(meses.length ? [['TOTAL', fmtNum(sesiones), conDato.length?fmtNum(personas):'—', conAsis.length?fmtNum(personas/conAsis.length,1):'—']] : [])
   );
 }
 
