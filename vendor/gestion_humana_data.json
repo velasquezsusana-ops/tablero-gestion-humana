@@ -12673,7 +12673,7 @@
       "fechaSolicitud": "2026-01-26",
       "dias": 4,
       "fechaMaxima": "2026-02-09",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "PREMIUM PLAZA",
       "reemplaza": "YANETH MARICEL FERNANDEZ SANCHEZ",
       "solicita": "ANGIE",
@@ -12870,8 +12870,8 @@
       "fechaIngreso": "2026-02-09",
       "fechaSolicitud": "2026-02-04",
       "dias": 5,
-      "fechaMaxima": null,
-      "estadoIngreso": "#REF!",
+      "fechaMaxima": "2026-02-25",
+      "estadoIngreso": "A TIEMPO",
       "punto": "SUPERNUNERARIA",
       "reemplaza": "MUÑOZ ZAPATA NELLY",
       "solicita": "ANGIE",
@@ -13446,8 +13446,8 @@
       "fechaIngreso": "2026-03-11",
       "fechaSolicitud": "2026-02-09",
       "dias": 30,
-      "fechaMaxima": null,
-      "estadoIngreso": "A TIEMPO",
+      "fechaMaxima": "2026-03-02",
+      "estadoIngreso": "FUERA DE TIEMPO",
       "punto": "MOLINOS",
       "reemplaza": "HENAO ROJAS MARIANA",
       "solicita": "ANGIE",
@@ -13465,7 +13465,7 @@
       "fechaSolicitud": "2026-02-18",
       "dias": 21,
       "fechaMaxima": "2026-03-11",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "MAYORCA 2",
       "reemplaza": "PALENCIA CAMICIOTTOLI YESENIA JOSEFINA",
       "solicita": "ANGIE",
@@ -13482,8 +13482,8 @@
       "fechaIngreso": "2026-03-11",
       "fechaSolicitud": "2026-02-20",
       "dias": 19,
-      "fechaMaxima": null,
-      "estadoIngreso": "#REF!",
+      "fechaMaxima": "2026-03-13",
+      "estadoIngreso": "A TIEMPO",
       "punto": "SUPERNUMERARIA",
       "reemplaza": "CASTAÑEDA RENTERIA GISETH JOVANA",
       "solicita": "ANGIE",
@@ -13771,7 +13771,7 @@
       "fechaSolicitud": "2026-03-19",
       "dias": 7,
       "fechaMaxima": "2026-04-14",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "MOLINOS",
       "reemplaza": "LUISA FERNANDA ARBELAEZ",
       "solicita": "ANGIE",
@@ -14131,7 +14131,7 @@
       "fechaSolicitud": "2026-04-01",
       "dias": 14,
       "fechaMaxima": "2026-04-17",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "LUISA FERNQANDA ORTIZ",
       "solicita": "LEDY ATEHORTUA",
@@ -14149,7 +14149,7 @@
       "fechaSolicitud": "2026-04-03",
       "dias": 12,
       "fechaMaxima": "2026-04-17",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "ENVIGADO",
       "reemplaza": "KAREN CORTES",
       "solicita": "LEGARDA",
@@ -14167,7 +14167,7 @@
       "fechaSolicitud": "2026-04-06",
       "dias": 9,
       "fechaMaxima": "2026-04-20",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "LAURELES",
       "reemplaza": "EDWIN DAVID CASALLAS",
       "solicita": "ELDA PALACIO",
@@ -14185,7 +14185,7 @@
       "fechaSolicitud": "2026-04-09",
       "dias": 6,
       "fechaMaxima": "2026-04-20",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "A TIEMPO",
       "punto": "VEGAS PLAZA",
       "reemplaza": "JUAN DAVID EXPOSITO",
       "solicita": "MAY CANO",
@@ -14617,7 +14617,7 @@
       "fechaSolicitud": "2026-05-12",
       "dias": -6,
       "fechaMaxima": "2026-05-27",
-      "estadoIngreso": "A TIEMPO",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SAN DIEGO",
       "reemplaza": "DANI FRANCO SALDARRIAGA",
       "solicita": "LEDY ATEHORTUA",
@@ -14635,7 +14635,7 @@
       "fechaSolicitud": "2026-05-19",
       "dias": -6,
       "fechaMaxima": "2026-06-02",
-      "estadoIngreso": "#REF!",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "ANYELA MARCELA OROZCO ALAVREZ",
       "solicita": "ANGIE",
@@ -15588,8 +15588,8 @@
       "fechaIngreso": "2026-06-30",
       "fechaSolicitud": "2026-07-19",
       "dias": -19,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-03",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "ANYELA MARCELA OROZCO ALVAREZ",
       "solicita": "ANGIE",
@@ -15606,8 +15606,8 @@
       "fechaIngreso": "2026-06-30",
       "fechaSolicitud": "2026-07-22",
       "dias": -22,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-05",
+      "estadoIngreso": "PENDIENTE",
       "punto": "VIVA ENVIGADO",
       "reemplaza": "MORENO MOSQUERA YULY AIDE",
       "solicita": "DUQUE",
@@ -15624,8 +15624,8 @@
       "fechaIngreso": "2026-06-30",
       "fechaSolicitud": "2026-07-30",
       "dias": -30,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-14",
+      "estadoIngreso": "PENDIENTE",
       "punto": "VIVA LAURELES",
       "reemplaza": "ACUÑA  NIDIAN MARIA",
       "solicita": "ANGIE",
@@ -15642,8 +15642,8 @@
       "fechaIngreso": "2026-06-30",
       "fechaSolicitud": "2026-07-09",
       "dias": -9,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-07-24",
+      "estadoIngreso": "PENDIENTE",
       "punto": "MOLINOS",
       "reemplaza": "MEJIA BALLESTEROS DRAIDY YESELY",
       "solicita": "WILL",
@@ -15660,8 +15660,8 @@
       "fechaIngreso": "2026-06-30",
       "fechaSolicitud": "2026-07-14",
       "dias": -14,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-07-29",
+      "estadoIngreso": "PENDIENTE",
       "punto": "DISTRITO VERA",
       "reemplaza": "KEVIN GRANADOS ARBOLEDA",
       "solicita": "WILL",
@@ -15678,8 +15678,8 @@
       "fechaIngreso": "2026-07-06",
       "fechaSolicitud": "2026-07-15",
       "dias": -9,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-07-30",
+      "estadoIngreso": "PENDIENTE",
       "punto": "PUERTA DEL NORTE",
       "reemplaza": "MIGUEL ANGEL CASTAÑO",
       "solicita": "PADILLA",
@@ -15696,8 +15696,8 @@
       "fechaIngreso": "2026-07-06",
       "fechaSolicitud": "2026-07-16",
       "dias": -10,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-07-31",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "VALENTINA CASTRILLON CALLE",
       "solicita": "PADILLA",
@@ -15714,8 +15714,8 @@
       "fechaIngreso": "2026-07-06",
       "fechaSolicitud": "2026-07-21",
       "dias": -15,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-04",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "JORDIN STEVEN RESTREPO PALENCIA",
       "solicita": "ANGIE",
@@ -15732,8 +15732,8 @@
       "fechaIngreso": "2026-07-06",
       "fechaSolicitud": "2026-07-21",
       "dias": -15,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-04",
+      "estadoIngreso": "PENDIENTE",
       "punto": "TESORO",
       "reemplaza": "CANDELO POSADA JAIRO ENRIQUE",
       "solicita": "DUQUE",
@@ -15750,8 +15750,8 @@
       "fechaIngreso": "2026-07-14",
       "fechaSolicitud": "2026-07-21",
       "dias": -7,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-04",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "ALEXANDER PEREZ SAN MIGUEL",
       "solicita": "LEDY ATEHORTUA",
@@ -15768,8 +15768,8 @@
       "fechaIngreso": "2026-07-14",
       "fechaSolicitud": "2026-07-21",
       "dias": -7,
-      "fechaMaxima": null,
-      "estadoIngreso": "#REF!",
+      "fechaMaxima": "2026-08-04",
+      "estadoIngreso": "PENDIENTE",
       "punto": "MOLINOS",
       "reemplaza": "LARGACHA ANDRADE KAREN",
       "solicita": "EYNER",
@@ -15822,8 +15822,8 @@
       "fechaIngreso": "2026-07-16",
       "fechaSolicitud": "2026-07-29",
       "dias": -13,
-      "fechaMaxima": null,
-      "estadoIngreso": "#NAME?",
+      "fechaMaxima": "2026-08-13",
+      "estadoIngreso": "PENDIENTE",
       "punto": "MOLINOS",
       "reemplaza": "SUAREZ SUAREZ DANNA MARCELA",
       "solicita": "EYNER",
@@ -16866,8 +16866,8 @@
       "fechaIngreso": "2026-10-06",
       "fechaSolicitud": "2026-09-30",
       "dias": 6,
-      "fechaMaxima": null,
-      "estadoIngreso": "#REF!",
+      "fechaMaxima": "2026-10-15",
+      "estadoIngreso": "A TIEMPO",
       "punto": "AVENTURA",
       "reemplaza": "LOIZY ARZUAGA VASQUEZ",
       "solicita": "LEDY ATEHORTUA",
@@ -16884,8 +16884,8 @@
       "fechaIngreso": "2026-10-06",
       "fechaSolicitud": "2026-09-30",
       "dias": 6,
-      "fechaMaxima": null,
-      "estadoIngreso": "#REF!",
+      "fechaMaxima": "2026-10-15",
+      "estadoIngreso": "A TIEMPO",
       "punto": "GRAN PLAZA",
       "reemplaza": "JHONATAN CASTRO",
       "solicita": "LEDY ATEHORTUA",
@@ -16956,8 +16956,8 @@
       "fechaIngreso": null,
       "fechaSolicitud": "2026-10-01",
       "dias": null,
-      "fechaMaxima": "2026-10-23",
-      "estadoIngreso": "A TIEMPO",
+      "fechaMaxima": null,
+      "estadoIngreso": null,
       "punto": "AVENTURA",
       "reemplaza": "YESENIA RODRIGUEZ",
       "solicita": "LIDER",
@@ -16993,7 +16993,7 @@
       "fechaSolicitud": "2026-10-02",
       "dias": null,
       "fechaMaxima": "2026-10-19",
-      "estadoIngreso": "FUERA DE TIEMPO",
+      "estadoIngreso": "PENDIENTE",
       "punto": "SUPERNUMERARIO",
       "reemplaza": "KEVIN ARCILA",
       "solicita": "WILL DELGADO",
@@ -26458,7 +26458,9 @@
       "fecha": "2026-08-03",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26467,7 +26469,9 @@
       "fecha": "2026-08-04",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26476,7 +26480,9 @@
       "fecha": "2026-08-05",
       "encargada": "Maria Isabel Martinez ",
       "lugar": "Virtual ",
-      "asistencia": "Comites SST"
+      "asistencia": "Comites SST",
+      "asistentes": null,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26485,7 +26491,9 @@
       "fecha": "2026-08-06",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26494,7 +26502,9 @@
       "fecha": "2026-08-10",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26503,7 +26513,9 @@
       "fecha": "2026-08-11",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26512,7 +26524,9 @@
       "fecha": "2026-08-12",
       "encargada": "ARL SURA",
       "lugar": "Virtual",
-      "asistencia": "Comites SST"
+      "asistencia": "Comites SST",
+      "asistentes": null,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26521,7 +26535,9 @@
       "fecha": "2026-08-13",
       "encargada": "ARL SURA",
       "lugar": "Virtual",
-      "asistencia": "Comites SST"
+      "asistencia": "Comites SST",
+      "asistentes": null,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26530,7 +26546,9 @@
       "fecha": "2026-08-13",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26539,7 +26557,9 @@
       "fecha": "2026-08-18",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26548,7 +26568,9 @@
       "fecha": "2026-08-20",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26557,7 +26579,9 @@
       "fecha": "2026-08-21",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26566,7 +26590,9 @@
       "fecha": "2026-08-25",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26575,7 +26601,9 @@
       "fecha": "2026-08-27",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": null,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26584,7 +26612,9 @@
       "fecha": "2026-09-01",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 20.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26593,7 +26623,9 @@
       "fecha": "2026-09-03",
       "encargada": "ARL SURA",
       "lugar": "Presencial ",
-      "asistencia": "Brigada de emergencia"
+      "asistencia": "Brigada de emergencia",
+      "asistentes": 10.0,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26602,7 +26634,9 @@
       "fecha": "2026-09-03",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 4.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26611,7 +26645,9 @@
       "fecha": "2026-09-07",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 2.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26620,7 +26656,9 @@
       "fecha": "2026-09-08",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 3.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26629,7 +26667,9 @@
       "fecha": "2026-09-10",
       "encargada": "Calidad",
       "lugar": "Presencial ",
-      "asistencia": "Comites SST"
+      "asistencia": "Comites SST",
+      "asistentes": 21.0,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26638,7 +26678,9 @@
       "fecha": "2026-09-10",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 3.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26647,7 +26689,9 @@
       "fecha": "2026-09-14",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 3.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26656,7 +26700,9 @@
       "fecha": "2026-09-15",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 9.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26665,7 +26711,9 @@
       "fecha": "2026-09-17",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 5.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26674,7 +26722,9 @@
       "fecha": "2026-09-21",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 1.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26683,7 +26733,9 @@
       "fecha": "2026-09-22",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 11.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26692,7 +26744,9 @@
       "fecha": "2026-09-23",
       "encargada": "ARL SURA",
       "lugar": "Virtual",
-      "asistencia": "Bienestar "
+      "asistencia": "Bienestar ",
+      "asistentes": 13.0,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26701,7 +26755,9 @@
       "fecha": "2026-09-24",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 5.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26710,7 +26766,9 @@
       "fecha": "2026-09-29",
       "encargada": "Maria Isabel Martinez",
       "lugar": "Virtual ",
-      "asistencia": "COPASS"
+      "asistencia": "COPASS",
+      "asistentes": 8.0,
+      "tipo": "Capacitación"
     },
     {
       "anio": 2026,
@@ -26719,7 +26777,9 @@
       "fecha": "2026-09-29",
       "encargada": "Sara Castro",
       "lugar": "Oficina Principal ",
-      "asistencia": "Ingresos "
+      "asistencia": "Ingresos ",
+      "asistentes": 9.0,
+      "tipo": "Inducción"
     },
     {
       "anio": 2026,
@@ -26728,7 +26788,9 @@
       "fecha": "2026-09-30",
       "encargada": "Maria Isabel Martinez",
       "lugar": "Virtual ",
-      "asistencia": "Comite COCOLA Central y Centro de trabajo "
+      "asistencia": "Comite COCOLA Central y Centro de trabajo ",
+      "asistentes": 16.0,
+      "tipo": "Capacitación"
     }
   ],
   "carteraInconsistencias": [

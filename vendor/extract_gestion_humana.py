@@ -168,6 +168,9 @@ capacitaciones_files = [f for f in os.listdir(DATA_DIR)
 for cf in capacitaciones_files:
     wb_cap = openpyxl.load_workbook(os.path.join(DATA_DIR, cf), data_only=True)
     for sheetname in wb_cap.sheetnames:
+        # oct-2026: una hoja por mes y columna nueva "NUMERO DE ASISTENTES" (se busca por encabezado)
+        head_cap = [strip_accents(str(c.value or "")).upper().strip() for c in wb_cap[sheetname][1]]
+        c_asis = next((k for k, h in enumerate(head_cap) if h.startswith("NUMERO DE ASISTENTES")), None)
         for r in rows_from(wb_cap[sheetname], 2):
             nombre_cap = g(r, 0)
             if nombre_cap is None:
@@ -178,6 +181,9 @@ for cf in capacitaciones_files:
             out["capacitacionesDetalle"].append({
                 "anio": anio_cap, "mes": mes_cap, "capacitacion": str(nombre_cap).strip(),
                 "fecha": as_date(fecha_cap), "encargada": g(r, 2), "lugar": g(r, 3), "asistencia": g(r, 4),
+                "asistentes": as_num_or_none(g(r, c_asis)) if c_asis is not None else None,
+                # Inducción = ingresos (no cuenta como planeada); lo demás es capacitación
+                "tipo": "Inducción" if "INDUCCION" in strip_accents(str(nombre_cap)).upper() else "Capacitación",
             })
 out["capacitacionesDetalle"].sort(key=lambda x: x["fecha"] or "")
 
