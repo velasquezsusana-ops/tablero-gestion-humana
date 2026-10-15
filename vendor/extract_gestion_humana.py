@@ -152,13 +152,22 @@ for r in rows_from(find_sheet(wb_gh, "Clima organizacional"), 2):
         "objetivoPts": g(r, 7), "objetivoPct": g(r, 8),
     })
 
-for r in rows_from(find_sheet(wb_gh, "Plan de formación"), 2):
+ws_plan = find_sheet(wb_gh, "Plan de formación")
+# Columnas opcionales SOLO de capacitaciones (sin inducciones), si algún día se agregan:
+# encabezado con "CAPACITACION" + "PLANIFICADA"/"REALIZADA" y sin "INDUCC".
+head_plan = [strip_accents(str(c.value or "")).upper() for c in ws_plan[1]] if ws_plan is not None else []
+def _col_cap(palabra):
+    return next((k for k, h in enumerate(head_plan) if "CAPACITACION" in h and palabra in h and "INDUCC" not in h), None)
+c_plan_cap, c_real_cap = _col_cap("PLANIFICADA"), _col_cap("REALIZADA")
+for r in rows_from(ws_plan, 2):
     if g(r, 0) is None or g(r, 1) is None:
         continue
     out["formacion"].append({
         "anio": g(r, 0), "mes": g(r, 1), "planificadas": g(r, 2),
         "realizadas": g(r, 3), "cumplimiento": g(r, 4), "objetivo": g(r, 5),
         "observaciones": g(r, 7),
+        "planificadasCap": as_num_or_none(g(r, c_plan_cap)) if c_plan_cap is not None else None,
+        "realizadasCap": as_num_or_none(g(r, c_real_cap)) if c_real_cap is not None else None,
     })
 
 # Detalle de capacitaciones (archivos "CAPACITACIONES <MES> <AÑO>.xlsx", uno por mes,

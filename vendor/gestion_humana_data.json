@@ -8,7 +8,9 @@
       "realizadas": 14,
       "cumplimiento": 1,
       "objetivo": 0.95,
-      "observaciones": null
+      "observaciones": null,
+      "planificadasCap": null,
+      "realizadasCap": null
     },
     {
       "anio": 2026,
@@ -17,7 +19,9 @@
       "realizadas": 17,
       "cumplimiento": 0.9444444444444444,
       "objetivo": 0.95,
-      "observaciones": null
+      "observaciones": null,
+      "planificadasCap": null,
+      "realizadasCap": null
     }
   ],
   "costo": [
