@@ -121,7 +121,7 @@ out = {
     "sst": [], "ausentismoGH": [], "costoBonificacion": [], "cobroIncapacidades": [],
     "depuracionCartera": [], "nomina": [], "ingresos": [], "rotacion": [],
     "rotacionCausa": [], "rotacionCiudad": [], "capacitacionesDetalle": [],
-    "carteraInconsistencias": [], "aprendices": [],
+    "carteraInconsistencias": [], "aprendices": [], "costoContratacionMensual": [],
 }
 
 # ── Gestión humana.xlsx ──────────────────────────────────────────────
@@ -129,7 +129,7 @@ out = {
 # ignorando las copias viejas que se guardan al lado ("... ultima version", "respaldo", "backup", "copia").
 def es_respaldo(f):
     n = strip_accents(f).lower()
-    return f.startswith("~$") or any(w in n for w in ("ultima version", "respaldo", "backup", "copia"))
+    return f.startswith("~$") or any(w in n for w in ("ultima", "ulrima", "respaldo", "backup", "copia"))
 
 def buscar_xlsx(prefijo, obligatorio=True):
     cands = [f for f in os.listdir(DATA_DIR)
@@ -193,24 +193,50 @@ COSTO_COLS = [  # (campo, prefijo del encabezado normalizado)
     ("cursosAlturas", "CURSOS DE ALTURAS"), ("cursoCoordAltura", "CURSO COORD"), ("cursoBpm", "CURSO BPM"),
     ("total", "TOTAL"), ("empleados", "EMPLEADOS"), ("costoEmpleado", "COSTO POR EMPLEADO"),
 ]
+# Oct-2026: la hoja se dividió en dos bloques. Fila 1 = títulos de bloque
+# ("COSTOS DE CONTRATACIÓN (FORMACIÓN, BIENESTAR Y DESARROLLO)" | "COSTOS DE FORMACIÓN CONSTANTE
+# Y BIENESTAR") y los encabezados bajaron a la fila 2. Los campos de siempre se buscan en el
+# bloque 1; los del bloque 2 van con prefijo "fc". Si la hoja vuelve a un solo bloque, igual sirve.
+FC_COLS = [
+    ("fcCursoCoordAltura", "CURSO COORD"), ("fcCursosAlturas", "CURSOS DE ALTURAS"), ("fcCursoBpm", "CURSO BPM"),
+    ("fcCapacitacionesGenerales", "COSTOS DE CAPACITACIONES GENERALES"), ("fcBienestar", "COSTOS DE ACTIVIDADES DE BIENESTAR"),
+]
 ws_costo = find_sheet(wb_gh, "Costo de capacitación")
 if ws_costo is not None:
-    head = [strip_accents(ws_costo.cell(row=1, column=c).value or "").upper().strip() for c in range(1, ws_costo.max_column + 1)]
-    cidx = {campo: next((k for k, h in enumerate(head) if h.startswith(pref)), None) for campo, pref in COSTO_COLS}
-    for r in rows_from(ws_costo, 2):
+    def _fila_norm(rn):
+        return [strip_accents(str(ws_costo.cell(row=rn, column=c).value or "")).upper().strip() for c in range(1, ws_costo.max_column + 1)]
+    hr = 1 if _fila_norm(1)[:1] == ["ANO"] else 2
+    head = _fila_norm(hr)
+    titulos = _fila_norm(1) if hr == 2 else []
+    b2 = next((k for k, t in enumerate(titulos) if "FORMACION CONSTANTE" in t), len(head))
+    def _buscar(pref, lo=0, hi=None):
+        hi = len(head) if hi is None else hi
+        return next((k for k in range(lo, hi) if head[k].startswith(pref)), None)
+    cidx = {campo: _buscar(pref, 0, b2) for campo, pref in COSTO_COLS}
+    cidx["empleados"] = _buscar("EMPLEADOS")
+    cidx["costoEmpleado"] = _buscar("COSTO POR EMPLEADO")
+    fc_fin = cidx["empleados"] if cidx["empleados"] is not None and cidx["empleados"] > b2 else None
+    fcidx = {campo: _buscar(pref, b2, fc_fin) for campo, pref in FC_COLS}
+    for r in rows_from(ws_costo, hr + 1):
         if g(r, 0) is None or g(r, 1) is None:
             continue
-        val = lambda campo: g(r, cidx[campo]) if cidx[campo] is not None else None
-        if not as_num(val("total")):
+        val = lambda idx: g(r, idx) if idx is not None else None
+        total1 = as_num(val(cidx["total"]))
+        fc = {campo: as_num(val(fcidx[campo])) for campo, _ in FC_COLS}
+        total2 = sum(fc.values())
+        if not total1 and not total2:   # mes que aún no cierra
             continue
         rec = {"anio": g(r, 0), "mes": g(r, 1)}
         for campo, _ in COSTO_COLS:
             if campo == "empleados":
-                rec[campo] = val(campo)
+                rec[campo] = val(cidx[campo])
             elif campo == "costoEmpleado":
-                rec[campo] = as_num_or_none(val(campo))
+                rec[campo] = as_num_or_none(val(cidx[campo]))
             else:
-                rec[campo] = as_num(val(campo))
+                rec[campo] = as_num(val(cidx[campo]))
+        rec.update(fc)
+        rec["totalFormacionConstante"] = total2
+        rec["totalGeneral"] = total1 + total2
         out["costo"].append(rec)
 
 # Costo de contratación (antes "Tiempo de contratación"): Año,Mes,Vacante,
@@ -220,23 +246,59 @@ if ws_costo is not None:
 # total empleados contratados,Costo/empleado
 # (Curso BPM/Presencial/Virtual son columnas nuevas; la hoja ahora trae una fila plantilla
 # por cada mes del año aunque no tenga datos reales -> se descartan filas sin empleados contratados)
-for r in rows_from(find_sheet(wb_gh, " Costo de contratación "), 3):
-    if g(r, 0) is None or g(r, 1) is None or g(r, 2) is None:
-        continue
-    if not g(r, 17):  # sin "Total empleados contratados" (None o 0) = fila plantilla sin datos reales
-        continue
-    out["costoContratacion"].append({
-        "anio": g(r, 0), "mes": g(r, 1), "vacante": g(r, 2),
-        "examenesMedicosMujer": parse_money(g(r, 3)), "examenesMedicosHombre": parse_money(g(r, 4)),
-        "estudioConfiabilidad": parse_money(g(r, 5)), "dotacion": parse_money(g(r, 6)),
-        "cursoBpm": parse_money(g(r, 7)),
-        "valorUnitarioPresencial": parse_money(g(r, 8)), "cantidadPresencial": as_num_or_none(g(r, 9)),
-        "valorUnitarioVirtual": parse_money(g(r, 10)), "cantidadVirtual": as_num_or_none(g(r, 11)),
-        "total": parse_money(g(r, 12)) or 0,
-        "totalCostoMujer": parse_money(g(r, 13)), "totalCostoHombre": parse_money(g(r, 14)),
-        "empleadosMujer": as_num_or_none(g(r, 15)), "empleadosHombre": as_num_or_none(g(r, 16)),
-        "empleadosContratados": g(r, 17), "costoEmpleado": parse_money(g(r, 18)),
-    })
+# Oct-2026: columnas por ENCABEZADO (se insertaron columnas vacías entre los exámenes médicos).
+# A la derecha viene una tabla resumen por mes: Año | Mes | Costos totales de contratación |
+# Cantidad de empleados ingresados | Costo por empleado  -> costoContratacionMensual.
+CC_COLS = [  # (campo, prefijo del encabezado normalizado, posición antigua por si no hay encabezado)
+    ("examenesMedicosMujer", "COSTO EXAMENES MEDICOS MUJER", 3), ("examenesMedicosHombre", "COSTO EXAMENES MEDICOS HOMBRE", 4),
+    ("estudioConfiabilidad", "ESTUDIO CONFIABILIDAD", 5), ("dotacion", "DOTACION", 6), ("cursoBpm", "CURSO BPM", 7),
+    ("valorUnitarioPresencial", "VALOR UNITARIO PRESENCIAL", 8), ("cantidadPresencial", "CANTIDAD PRESENCIAL", 9),
+    ("valorUnitarioVirtual", "VALOR UNITARIO VIRTUAL", 10), ("cantidadVirtual", "CANTIDAD VIRTUAL", 11),
+    ("total", "TOTAL COSTO CONTRATACION", 12), ("totalCostoMujer", "TOTAL COSTO CONTRA MUJER", 13),
+    ("totalCostoHombre", "TOTAL COSTO CONTRA HOMBRE", 14), ("empleadosMujer", "EMPLEADOS MUJER", 15),
+    ("empleadosHombre", "EMPLEADOS HOMBRE", 16), ("empleadosContratados", "TOTAL EMPLEADOS CONTRATADOS", 17),
+    ("costoEmpleado", "COSTO POR EMPLEADO (", 18),
+]
+ws_cc = find_sheet(wb_gh, " Costo de contratación ")
+if ws_cc is not None:
+    # encabezados en la fila donde la columna A dice "Año" (hoy es la fila 2)
+    hr_cc = next((rn for rn in range(1, 6) if strip_accents(str(ws_cc.cell(row=rn, column=1).value or "")).upper().strip() == "ANO"), 2)
+    head = [strip_accents(str(ws_cc.cell(row=hr_cc, column=c).value or "")).upper().strip() for c in range(1, ws_cc.max_column + 1)]
+    def _cc(pref, default=None, desde=0):
+        return next((k for k in range(desde, len(head)) if head[k].startswith(pref)), default)
+    ci = {campo: _cc(pref, pos) for campo, pref, pos in CC_COLS}
+    for r in rows_from(ws_cc, hr_cc + 1):
+        if not isinstance(g(r, 0), (int, float)) or g(r, 1) is None or g(r, 2) is None:
+            continue
+        if not g(r, ci["empleadosContratados"]):  # fila plantilla del mes sin datos reales
+            continue
+        rec = {"anio": g(r, 0), "mes": g(r, 1), "vacante": g(r, 2)}
+        for campo, _, _ in CC_COLS:
+            v = g(r, ci[campo])
+            if campo == "empleadosContratados":
+                rec[campo] = v
+            elif campo.startswith("cantidad") or campo.startswith("empleados"):
+                rec[campo] = as_num_or_none(v)
+            else:
+                rec[campo] = parse_money(v)
+        rec["total"] = rec["total"] or 0
+        out["costoContratacion"].append(rec)
+
+    c_tot = _cc("COSTOS TOTALES DE CONTRATACION")
+    if c_tot is not None and c_tot >= 2:
+        c_n = _cc("CANTIDAD DE EMPLEADOS INGRESADOS", None, c_tot)
+        c_ce = _cc("COSTO POR EMPLEADO", None, c_tot + 1)
+        for r in rows_from(ws_cc, hr_cc + 1):
+            anio, mes = g(r, c_tot - 2), g(r, c_tot - 1)
+            costo = parse_money(g(r, c_tot))
+            n = as_num_or_none(g(r, c_n)) if c_n is not None else None
+            if not isinstance(anio, (int, float)) or mes is None or not n:
+                continue
+            ce = as_num_or_none(g(r, c_ce)) if c_ce is not None else None
+            out["costoContratacionMensual"].append({
+                "anio": anio, "mes": mes, "costoTotal": costo, "empleados": n,
+                "costoEmpleado": ce if ce is not None else ((costo or 0) / n),
+            })
 
 # SST (antes "Accidentes laborales"): registro detallado por accidente.
 # Año,Mes,Fecha,Día del accidente,Cedula,Nombre,Cargo,Proceso,Punto de venta,Accidente,
@@ -423,23 +485,42 @@ NON_CITY_SHEETS = {"FESTIVOS", "CARGOS Y ESTADOS", "HOJA1"}
 OTHER_SHEETS = {"NO CRITICOS": "no_criticos", "TEMPORADA": "temporada", "APRENDICES": "aprendices"}
 wb_ing = openpyxl.load_workbook(os.path.join(DATA_DIR, buscar_xlsx("ingresos")), data_only=True)
 
+# Oct-2026: se agregó la columna "Dias de contratación" -> las demás se corrieron; se leen por
+# ENCABEZADO (con la posición antigua de respaldo). Vacante = tiene fecha de solicitud, no tiene
+# fecha de ingreso y el estado no es CONTRATADO (los días abiertos se calculan en el tablero vs. hoy).
+def _es_fecha(v):
+    return isinstance(v, (datetime.datetime, datetime.date))
+
 def extract_ingresos(ws, ciudad, tipo):
+    head = [strip_accents(str(ws.cell(row=1, column=c).value or "")).upper().strip() for c in range(1, ws.max_column + 1)]
+    col = lambda name, pos: next((k for k, h in enumerate(head) if h == name), pos)
+    cN, cC, cE = col("NOMBRE NUEVO INGRESO", 0), col("CARGO", 1), col("ESTADO", 2)
+    cI, cSo, cS = col("FECHA DE INGRESO", 3), col("SOLICITA", 4), col("FECHA DE SOLICITUD", 5)
+    cP, cR, cPos = col("PUNTO", 6), col("PERSONA A QUIEN REEMPLAZARA", 7), col("POSICION CLAVES", 8)
+    cF, cEI = col("FECHA MAXIMA", 10), col("ESTADO DEL INGRESO", 12)
+    txt = lambda v: (str(v).strip() or None) if v is not None else None
     for r in rows_from(ws, 2):
-        nombre, cargo, estado = g(r, 0), g(r, 1), g(r, 2)
+        nombre, cargo, estado = g(r, cN), g(r, cC), g(r, cE)
         if nombre is None and cargo is None and estado is None:
             continue
-        fecha_ingreso = g(r, 3)
-        fecha_solicitud = g(r, 5)
+        fecha_ingreso = g(r, cI)
+        fecha_solicitud = g(r, cS)
         dias = None
-        if isinstance(fecha_ingreso, (datetime.datetime, datetime.date)) and isinstance(fecha_solicitud, (datetime.datetime, datetime.date)):
+        if _es_fecha(fecha_ingreso) and _es_fecha(fecha_solicitud):
             dias = (fecha_ingreso - fecha_solicitud).days
         estado_norm = str(estado).strip().upper() if estado else None
+        # "CONTRATADO" (y sus variantes mal escritas: CONTRADADO, CONTRATDO, CONTRATA)
+        contratado = bool(estado_norm and estado_norm.startswith("CONTRA"))
+        estado_ing = g(r, cEI)
         out["ingresos"].append({
             "ciudad": ciudad, "tipo": tipo, "nombre": nombre,
             "cargo": str(cargo).strip().upper() if cargo else None,
-            "estado": estado_norm, "contratado": bool(estado_norm and "CONTRATADO" in estado_norm),
+            "estado": estado_norm, "contratado": contratado,
+            "vacante": (not _es_fecha(fecha_ingreso)) and _es_fecha(fecha_solicitud) and not contratado,
             "fechaIngreso": as_date(fecha_ingreso), "fechaSolicitud": as_date(fecha_solicitud),
-            "dias": dias, "fechaMaxima": as_date(g(r, 10)), "estadoIngreso": g(r, 12),
+            "dias": dias, "fechaMaxima": as_date(g(r, cF)),
+            "estadoIngreso": estado_ing if isinstance(estado_ing, str) else None,
+            "punto": txt(g(r, cP)), "reemplaza": txt(g(r, cR)), "solicita": txt(g(r, cSo)), "posicion": txt(g(r, cPos)),
         })
 
 for sn in wb_ing.sheetnames:
