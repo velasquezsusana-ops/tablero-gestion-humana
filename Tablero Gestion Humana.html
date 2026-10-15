@@ -524,7 +524,26 @@
       <div class="panel-grid">
         <div class="panel">
           <h3># de accidentes por mes</h3>
+          <div class="panel-sub">Leves y graves</div>
           <div class="chart-wrap"><canvas id="chartAccidentesCant"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Accidentes por día de la semana</h3>
+          <div class="panel-sub">¿Qué días se accidentan más? Leves y graves</div>
+          <div class="chart-wrap"><canvas id="chartAccidentesDia"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Leves vs. graves</h3>
+          <div class="chart-wrap"><canvas id="chartAccidentesTipo"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Días de incapacidad por mes</h3>
+          <div class="panel-sub">Barras: días de incapacidad · Línea: promedio de días por accidente</div>
+          <div class="chart-wrap"><canvas id="chartAccidentesIncapacidad"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Días de incapacidad por día de la semana</h3>
+          <div class="chart-wrap"><canvas id="chartAccidentesIncapDia"></canvas></div>
         </div>
         <div class="panel">
           <h3>Accidentes por causal</h3>
@@ -2401,38 +2420,81 @@ function renderAccidentes(){
   populateMesFilter('sstMesFilter', DATA.sst, drawAccidentesTab);
   drawAccidentesTab();
 }
+// Día de la semana normalizado ("Sabado" -> "Sábado"); si falta, se saca de la fecha.
+const DIAS_SEMANA = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+function sstDia(r){
+  const t = ghStripAccents(r.diaAccidente||'').trim().toLowerCase();
+  const k = DIAS_SEMANA.findIndex(d=>ghStripAccents(d).toLowerCase()===t);
+  if (k>=0) return DIAS_SEMANA[k];
+  const f = r.fecha instanceof Date ? r.fecha : (r.fecha ? new Date(r.fecha) : null);
+  return f && !isNaN(f) ? DIAS_SEMANA[(f.getDay()+6)%7] : null;
+}
+function sstEsGrave(r){ return /GRAVE/i.test(String(r.tipoAccidente||'')); }
+// La columna "severidad" de la hoja SST trae los días de incapacidad del accidente.
+function sstDiasIncap(r){ const n = Number(r.severidad); return isFinite(n) ? n : 0; }
+
 function drawAccidentesTab(){
   const sel = document.getElementById('sstAnioFilter').value;
   const mesSel = document.getElementById('sstMesFilter').value;
   let rows = sel==='Todos' ? DATA.sst : DATA.sst.filter(r=>String(r.anio)===String(sel));
   rows = rows.filter(r=>matchesMes(r, mesSel));
 
+  const graves = rows.filter(sstEsGrave).length, leves = rows.length - graves;
+  const diasIncap = rows.reduce((s,r)=>s+sstDiasIncap(r),0);
+  const conIncap = rows.filter(r=>sstDiasIncap(r)>0).length;
+  const porDia = new Map(DIAS_SEMANA.map(d=>[d,{n:0,graves:0,dias:0}]));
+  rows.forEach(r=>{ const d = sstDia(r); if(!d) return; const e = porDia.get(d); e.n++; if(sstEsGrave(r)) e.graves++; e.dias += sstDiasIncap(r); });
+  const maxN = Math.max(0, ...[...porDia.values()].map(e=>e.n));
+  const diasTop = DIAS_SEMANA.filter(d=>maxN && porDia.get(d).n===maxN);
+
   const grid = document.getElementById('sstKpiGrid');
   grid.innerHTML = '';
   grid.appendChild(kpiCard('Accidentes registrados', fmtNum(rows.length), null, rows.length?'critical':'good'));
-  const causales = new Set(rows.map(r=>r.causal).filter(Boolean));
-  grid.appendChild(kpiCard('Causales distintas', fmtNum(causales.size), null, 'neutral'));
-  // "Leve/Grave" viene en la columna Tipo de accidente (severidad es un número)
-  const graves = rows.filter(r=>/GRAVE/i.test(String(r.tipoAccidente||'')+' '+String(r.severidad||''))).length;
-  grid.appendChild(kpiCard('Accidentes graves', fmtNum(graves), null, graves?'critical':'good'));
+  grid.appendChild(kpiCard('Leves', fmtNum(leves) + (rows.length ? ` (${fmtPct(leves/rows.length)})` : ''), null, 'neutral'));
+  grid.appendChild(kpiCard('Graves', fmtNum(graves) + (rows.length ? ` (${fmtPct(graves/rows.length)})` : ''), graves?'Revisar':null, graves?'critical':'good'));
+  grid.appendChild(kpiCard('Días de incapacidad', fmtNum(diasIncap), `${fmtNum(conIncap)} accidentes con incapacidad`, 'neutral'));
+  grid.appendChild(kpiCard('Promedio días por accidente', rows.length ? fmtNum(diasIncap/rows.length,1)+' d' : '—', null, 'neutral'));
+  if (diasTop.length) grid.appendChild(kpiCard('Día con más accidentes', diasTop.join(' y '), `${fmtNum(maxN)} accidentes`, 'critical'));
 
   if (!rows.length){
-    makeBarChart('chartAccidentesCant', [], []);
-    makeBarChart('chartAccidentesCausal', [], []);
-    makeBarChart('chartAccidentesPuntoVenta', [], []);
-    renderTable('tblAccidentes', ['Año','Mes','Fecha','Día','Cédula','Nombre','Cargo','Proceso','Punto de venta','Accidente','Causal','Tipo','Severidad'], []);
+    ['chartAccidentesCant','chartAccidentesDia','chartAccidentesIncapacidad','chartAccidentesIncapDia','chartAccidentesCausal','chartAccidentesPuntoVenta'].forEach(id=>makeBarChart(id, [], []));
+    makeDoughnutChart('chartAccidentesTipo', [], [], []);
+    renderTable('tblAccidentes', ['Año','Mes','Fecha','Día','Cédula','Nombre','Cargo','Proceso','Punto de venta','Accidente','Causal','Tipo','Días de incapacidad'], []);
     return;
   }
 
+  // Por mes (leves / graves) y días de incapacidad por mes
   const porMes = new Map();
-  rows.forEach(r=>{ const k = `${r.mes} ${r.anio}`; porMes.set(k, (porMes.get(k)||0)+1); });
+  rows.forEach(r=>{
+    const k = `${r.mes} ${r.anio}`;
+    if(!porMes.has(k)) porMes.set(k, {leves:0, graves:0, dias:0});
+    const e = porMes.get(k); sstEsGrave(r) ? e.graves++ : e.leves++; e.dias += sstDiasIncap(r);
+  });
   const mesesOrdenados = [...porMes.keys()].sort((a,b)=>{
     const [ma,aa] = a.split(' '); const [mb,ab] = b.split(' ');
     return periodKey(aa,ma) - periodKey(ab,mb);
   });
-  makeBarChart('chartAccidentesCant', mesesOrdenados, [
-    { label:'# Accidentes', data: mesesOrdenados.map(k=>porMes.get(k)), backgroundColor: css('--series-1'), borderRadius:4, maxBarThickness:24 }
-  ]);
+  const mesLbl = mesesOrdenados.map(k=>{ const [m,a] = k.split(' '); return `${m.slice(0,3)} ${a}`; });
+  makeBarChart('chartAccidentesCant', mesLbl, [
+    { label:'Leves', data: mesesOrdenados.map(k=>porMes.get(k).leves), backgroundColor: css('--series-3'), borderRadius:3, maxBarThickness:24 },
+    { label:'Graves', data: mesesOrdenados.map(k=>porMes.get(k).graves), backgroundColor: css('--critical'), borderRadius:3, maxBarThickness:24 }
+  ], {stacked:true, integer:true});
+  makeComboChart('chartAccidentesIncapacidad', mesLbl, {
+    bars: [ { label:'Días de incapacidad', data: mesesOrdenados.map(k=>porMes.get(k).dias), backgroundColor: css('--series-2'), maxBarThickness:28 } ],
+    lines: [ { label:'Promedio días por accidente', data: mesesOrdenados.map(k=>{ const e = porMes.get(k); const n = e.leves+e.graves; return n ? Math.round(e.dias/n*10)/10 : null; }), borderColor: css('--series-1'), backgroundColor: css('--series-1'), yAxisID:'y1' } ],
+    yFmt: (v)=>fmtNum(v), y1Fmt: (v)=>fmtNum(v,1)+' d'
+  });
+
+  // Día de la semana
+  makeBarChart('chartAccidentesDia', DIAS_SEMANA, [
+    { label:'Leves', data: DIAS_SEMANA.map(d=>porDia.get(d).n - porDia.get(d).graves), backgroundColor: css('--series-3'), borderRadius:3, maxBarThickness:30 },
+    { label:'Graves', data: DIAS_SEMANA.map(d=>porDia.get(d).graves), backgroundColor: css('--critical'), borderRadius:3, maxBarThickness:30 }
+  ], {stacked:true, integer:true, allLabels:true});
+  makeBarChart('chartAccidentesIncapDia', DIAS_SEMANA, [
+    { label:'Días de incapacidad', data: DIAS_SEMANA.map(d=>porDia.get(d).dias), backgroundColor: css('--series-2'), borderRadius:3, maxBarThickness:30 }
+  ], {allLabels:true});
+
+  makeDoughnutChart('chartAccidentesTipo', ['Leves','Graves'], [leves, graves], [css('--series-3'), css('--critical')]);
 
   const porCausal = topEntries(countBy(rows, r=>r.causal), 10);
   makeBarChart('chartAccidentesCausal', porCausal.map(e=>e[0]), [
@@ -2445,8 +2507,8 @@ function drawAccidentesTab(){
   ], {horizontal:true});
 
   renderTable('tblAccidentes',
-    ['Año','Mes','Fecha','Día','Cédula','Nombre','Cargo','Proceso','Punto de venta','Accidente','Causal','Tipo','Severidad'],
-    rows.map(r=>[r.anio, r.mes, fmtDate(r.fecha), r.diaAccidente||'—', r.cedula||'—', r.nombre||'—', r.cargo||'—', r.proceso||'—', r.puntoVenta||'—', r.accidente||'—', r.causal||'—', r.tipoAccidente||'—', r.severidad||'—'])
+    ['Año','Mes','Fecha','Día','Cédula','Nombre','Cargo','Proceso','Punto de venta','Accidente','Causal','Tipo','Días de incapacidad'],
+    rows.map(r=>[r.anio, r.mes, fmtDate(r.fecha), sstDia(r)||'—', r.cedula||'—', r.nombre||'—', r.cargo||'—', r.proceso||'—', r.puntoVenta||'—', r.accidente||'—', r.causal||'—', r.tipoAccidente||'—', r.severidad||'—'])
   );
 }
 
